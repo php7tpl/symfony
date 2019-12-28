@@ -1,0 +1,37 @@
+connection:
+    map:
+        article_category: art_category
+        article_post: art_post
+        article_tag: art_tag
+        article_tag_post: art_tag_post
+        eq_migration: migration
+#        defaultConnection: mysqlServer
+#        defaultConnection: sqliteServer
+#    defaultConnection: pgsqlServer
+#    connections:
+#        mysqlServer:
+#            driver: mysql
+#            host: localhost
+#            database: symfony-on-rails
+#            username: root
+#        pgsqlServer:
+#            driver: pgsql
+#            host: localhost
+#            database: symfony-on-rails
+#            username: postgres
+#            password: postgres
+#        sqliteServer:
+#            driver: sqlite
+#            database: /var/sqlite/default.sqlite
+fixture:
+    directory:
+#        - /src/Fixtures
+        - /vendor/php7lab/sandbox/src/Article/Domain/Fixtures
+        - /vendor/php7lab/sandbox/src/Messenger/Domain/Fixtures
+        - /vendor/php7lab/sandbox/src/User/Domain/Fixtures
+migrate:
+    directory:
+        - /vendor/php7lab/sandbox/src/Article/Domain/Migrations
+        - /vendor/php7lab/sandbox/src/Messenger/Domain/Migrations
+        - /vendor/php7lab/sandbox/src/User/Domain/Migrations
+        - /vendor/php7lab/sandbox/src/Queue/Domain/Migrations

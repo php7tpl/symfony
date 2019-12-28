@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {{ style('/resource/style/vendor/vendor.css') }}
+    {{ script('/resource/script/vendor/vendor.js') }}
+    {% include '@Web/style.html.twig' %}
+</head>
+<body>
+{% include 'widget/navbar.html.twig' %}
+<div class="container">
+    {% include '@Notify/notify.html.twig' %}
+    {% block body %}{% endblock %}
+    {% include 'widget/footer.html.twig' %}
+</div>
+{% include '@Web/script.html.twig' %}
+</body>
+</html>

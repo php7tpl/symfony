@@ -1,0 +1,20 @@
+
+# main page
+default:
+    path: /
+    controller: App\Bundle\Dashboard\Web\Controllers\MainController::index
+
+app_rails:
+    resource: "../../src/Bundle/Rails/Web/config/routes.yaml"
+
+article:
+    resource: "@ArticleBundle/Resources/config/routing/all.yaml"
+
+app_messenger:
+    resource: "@MessengerBundle/Resources/config/routing/all.yaml"
+
+app_user:
+    resource: "@UserBundle/Api/config/routes.yaml"
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"

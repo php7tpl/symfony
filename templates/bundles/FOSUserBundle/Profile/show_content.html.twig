@@ -1,0 +1,12 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+<table class="table {#table-striped#} table-bordered">
+    <tr>
+        <th>{{ 'profile.show.username'|trans }}</th>
+        <td>{{ user.username }}</td>
+    </tr>
+    <tr>
+        <th>{{ 'profile.show.email'|trans }}</th>
+        <td>{{ user.email }}</td>
+    </tr>
+</table>

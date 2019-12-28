@@ -1,0 +1,3 @@
+#index:
+#    path: /
+#    controller: PhpLab\Rest\Controllers\DefaultController::index
