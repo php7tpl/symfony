@@ -12,12 +12,12 @@ connection:
 #        mysqlServer:
 #            driver: mysql
 #            host: localhost
-#            database: symfony-on-rails
+#            database: symfony-tpl
 #            username: root
 #        pgsqlServer:
 #            driver: pgsql
 #            host: localhost
-#            database: symfony-on-rails
+#            database: symfony-tpl
 #            username: postgres
 #            password: postgres
 #        sqliteServer:
