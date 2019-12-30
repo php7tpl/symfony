@@ -39,6 +39,9 @@ services:
     PhpLab\Sandbox\User\Api\Controllers\AuthController:
         tags: ['controller.service_arguments']
 
+    PhpLab\Sandbox\Queue\Commands\RunCommand:
+        tags: ['controller.service_arguments']
+
     PhpLab\Eloquent\Db\Helpers\Manager:
         arguments:
             $mainConfigFile: '%env(ELOQUENT_CONFIG_FILE)%'
