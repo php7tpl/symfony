@@ -57,18 +57,6 @@ class MainController extends AbstractController
                     'title' => 'rails',
                     'url' => '/rails',
                 ],
-                [
-                    'title' => 'SPA',
-                    'url' => '/spa',
-                ],
-                [
-                    'title' => 'FOS - register',
-                    'url' => '/register',
-                ],
-                [
-                    'title' => 'FOS - login',
-                    'url' => '/login',
-                ],
             ],
         ]);
     }
