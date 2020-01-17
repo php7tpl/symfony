@@ -14,8 +14,6 @@
         "php7extension/psr": "dev-master",
         "php7rails/app": "dev-master",
         "php7rails/domain": "dev-master",
-        "php7tool/test": "dev-master",
-        "php7tool/vendor": "dev-master",
 
         "php7lab/sandbox": "dev-master",
         "php7lab/domain": "dev-master",
@@ -128,14 +126,6 @@
         {
             "type": "git",
             "url": "https://github.com/php7lab/legacy.git"
-        },
-        {
-            "type": "git",
-            "url": "https://github.com/php7tool/test.git"
-        },
-        {
-            "type": "git",
-            "url": "https://github.com/php7tool/vendor.git"
         },
         {
             "type": "git",
