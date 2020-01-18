@@ -36,4 +36,4 @@ $boot->setAliases([
     '@yubundle/bundle' => 'vendor/yubundle/bundle/src',
 ]);*/
 /** Подключение рельсов */
-//Constant::init();
+Constant::setBase();
