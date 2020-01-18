@@ -24,7 +24,7 @@ $_SERVER['APP_DEBUG'] = $_SERVER['APP_DEBUG'] ?? $_ENV['APP_DEBUG'] ?? 'prod' !=
 $_SERVER['APP_DEBUG'] = $_ENV['APP_DEBUG'] = (int) $_SERVER['APP_DEBUG'] || filter_var($_SERVER['APP_DEBUG'], FILTER_VALIDATE_BOOLEAN) ? '1' : '0';
 
 /** Подключение рельсов */
-include_once(__DIR__ . '/../vendor/php7rails/app/src/libs/Boot.php');
+/*include_once(__DIR__ . '/../vendor/php7rails/app/src/libs/Boot.php');
 $boot = new \php7rails\app\libs\Boot;
 $boot->appName = 'frontend';
 $boot->init();
@@ -34,6 +34,6 @@ $boot->loadConfig([
 ]);
 $boot->setAliases([
     '@yubundle/bundle' => 'vendor/yubundle/bundle/src',
-]);
+]);*/
 /** Подключение рельсов */
-Constant::init();
+//Constant::init();
