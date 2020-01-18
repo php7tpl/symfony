@@ -15,7 +15,8 @@ use Symfony\Component\Routing\RequestContext;
 use Symfony\Component\Routing\Route;
 use Symfony\Component\Routing\RouteCollection;
 
-require_once __DIR__ . '/../../vendor/php7lab/domain/src/Php/bootstrap.php';
+require __DIR__ . '/../../vendor/autoload.php';
+require __DIR__ . '/../../vendor/php7lab/sandbox/src/App/Libs/bootstrapEnv.php';
 
 // init DB
 $eloquentConfigFile = $_ENV['ELOQUENT_CONFIG_FILE'];
