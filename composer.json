@@ -9,10 +9,6 @@
         "friendsofsymfony/user-bundle": "^2.1",
         "guzzlehttp/guzzle": "^6.3",
 
-        "php7extension/bundle": "dev-master",
-        "php7extension/crypt": "dev-master",
-        "php7extension/psr": "dev-master",
-
         "php7lab/sandbox": "dev-master",
         "php7lab/domain": "dev-master",
         "php7lab/eloquent": "dev-master",
@@ -124,22 +120,6 @@
         {
             "type": "git",
             "url": "https://github.com/php7lab/legacy.git"
-        },
-        {
-            "type": "git",
-            "url": "https://github.com/php7rails/extension.git"
-        },
-        {
-            "type": "git",
-            "url": "https://github.com/php7extension/psr.git"
-        },
-        {
-            "type": "git",
-            "url": "https://github.com/php7extension/bundle.git"
-        },
-        {
-            "type": "git",
-            "url": "https://github.com/php7extension/crypt.git"
         }
     ]
 }
