@@ -4,6 +4,10 @@ default:
     path: /
     controller: App\Bundle\Dashboard\Web\Controllers\MainController::index
 
+admin:
+    path: /admin
+    controller: App\Bundle\Dashboard\Admin\Controllers\MainController::index
+
 app_rails:
     resource: "../../src/Bundle/Rails/Web/config/routes.yaml"
 
