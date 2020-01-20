@@ -21,4 +21,5 @@ return [
     PhpLab\Sandbox\User\UserBundle::class => ['all' => true],
     PhpLab\Sandbox\Notify\NotifyBundle::class => ['all' => true],
     PhpLab\Sandbox\Web\WebBundle::class => ['all' => true],
+    PhpLab\Sandbox\AdminPanel\AdminPanelBundle::class => ['all' => true],
 ];
