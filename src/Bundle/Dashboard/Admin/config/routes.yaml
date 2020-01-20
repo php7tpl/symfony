@@ -1,0 +1,3 @@
+admin_dashboard:
+    path: /
+    controller: App\Bundle\Dashboard\Admin\Controllers\MainController::index

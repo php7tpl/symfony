@@ -5,19 +5,19 @@ default:
     controller: App\Bundle\Dashboard\Web\Controllers\MainController::index
 
 admin:
-    path: /admin
-    controller: App\Bundle\Dashboard\Admin\Controllers\MainController::index
+    prefix: '/admin'
+    resource: "../../src/Bundle/Dashboard/Admin/config/routes.yaml"
 
-app_rails:
+rails:
     resource: "../../src/Bundle/Rails/Web/config/routes.yaml"
 
 article:
     resource: "@ArticleBundle/Resources/config/routing/all.yaml"
 
-app_messenger:
+messenger:
     resource: "@MessengerBundle/Resources/config/routing/all.yaml"
 
-app_user:
+user:
     resource: "@UserBundle/Api/config/routes.yaml"
 
 fos_user:
