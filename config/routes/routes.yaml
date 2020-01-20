@@ -4,7 +4,7 @@ default:
     path: /
     controller: App\Bundle\Dashboard\Web\Controllers\MainController::index
 
-admin:
+admin_dashboard:
     prefix: '/admin'
     resource: "../../src/Bundle/Dashboard/Admin/config/routes.yaml"
 
@@ -18,7 +18,7 @@ messenger:
     resource: "@MessengerBundle/Resources/config/routing/all.yaml"
 
 user:
-    resource: "@UserBundle/Api/config/routes.yaml"
+    resource: "@UserBundle/Resources/config/routing/all.yaml"
 
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
