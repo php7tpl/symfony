@@ -5,6 +5,9 @@
 {% endblock breadcrumb %}
 
 {% block body %}
+
+    {{ breadcrumbAdd('Profile', path('fos_user_profile_show')) }}
+
     <div class="pull-right">
         <a class="btn btn-primary" href="{{ path('fos_user_profile_edit') }}">Profile edit</a>
     </div>

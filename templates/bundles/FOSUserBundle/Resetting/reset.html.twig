@@ -1,5 +1,9 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-{% include "@FOSUser/Resetting/reset_content.html.twig" %}
+
+    {{ breadcrumbAdd('Resetting', path('fos_user_resetting_request')) }}
+    {{ breadcrumbAdd('Reset') }}
+
+    {% include "@FOSUser/Resetting/reset_content.html.twig" %}
 {% endblock body %}

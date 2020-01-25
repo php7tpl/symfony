@@ -1,5 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+    {{ breadcrumbAdd('Profile', path('fos_user_profile_show')) }}
+    {{ breadcrumbAdd('Edit', path('fos_user_profile_edit')) }}
 {% include "@FOSUser/Profile/edit_content.html.twig" %}
 {% endblock body %}

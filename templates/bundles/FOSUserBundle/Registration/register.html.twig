@@ -1,5 +1,6 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+    {{ breadcrumbAdd('Registration account', path('fos_user_registration_register')) }}
 {% include "@FOSUser/Registration/register_content.html.twig" %}
 {% endblock body %}

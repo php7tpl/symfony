@@ -3,6 +3,8 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
 {% block body %}
+    {{ breadcrumbAdd('Resetting', path('fos_user_resetting_request')) }}
+    {{ breadcrumbAdd('Check email') }}
 <p>
 {{ 'resetting.check_email'|trans({'%tokenLifetime%': tokenLifetime})|nl2br }}
 </p>
