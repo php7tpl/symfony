@@ -1,13 +1,18 @@
 <!doctype html>
+{{ style('/bundles/web/vendor/bootstrap/css/bootstrap.min.css') }}
+{{ style('/app/style/sticky-footer.css') }}
+{{ style('/bundles/web/vendor/fontawesome-free/css/all.min.css') }}
+{{ script('/bundles/web/vendor/jquery/jquery.min.js') }}
+{{ script('/bundles/web/vendor/bootstrap/js/bootstrap.bundle.min.js') }}
+{{ breadcrumbAdd('<i class="fa fa-home" aria-hidden="true"></i>', '/') }}
+{% set bodyCode %}
+    {% block body %}{% endblock %}
+{% endset %}
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <title>{% block title %}Welcome!{% endblock %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    {{ style('/bundles/web/vendor/bootstrap/css/bootstrap.min.css') }}
-    {{ style('/app/style/sticky-footer.css') }}
-    {{ script('/bundles/web/vendor/jquery/jquery.min.js') }}
-    {{ script('/bundles/web/vendor/bootstrap/js/bootstrap.bundle.min.js') }}
     {% include '@Notify/notify.html.twig' %}
     {% include '@Web/style.html.twig' %}
 </head>
@@ -15,10 +20,9 @@
 {% include 'widget/navbar.html.twig' %}
 <div class="container" style="margin-top: 20px;">
     <nav aria-label="breadcrumb">
-        {{ breadcrumbAdd('Home', './') }}
         {{ breadcrumb() }}
     </nav>
-    {% block body %}{% endblock %}
+    {{ bodyCode }}
 </div>
 <footer class="footer">
     <div class="container">
