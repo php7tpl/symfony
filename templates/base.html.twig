@@ -1,19 +1,26 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <title>{% block title %}Welcome!{% endblock %}</title>
-    {{ style('/resource/style/vendor/vendor.css') }}
-    {{ script('/resource/script/vendor/vendor.js') }}
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {{ style('/bundles/web/vendor/bootstrap/css/bootstrap.min.css') }}
+    {{ style('/app/style/sticky-footer.css') }}
+    {{ script('/bundles/web/vendor/jquery/jquery.min.js') }}
+    {{ script('/bundles/web/vendor/bootstrap/js/bootstrap.bundle.min.js') }}
+    {% include '@Notify/notify.html.twig' %}
     {% include '@Web/style.html.twig' %}
 </head>
 <body>
 {% include 'widget/navbar.html.twig' %}
-<div class="container">
-    {% include '@Notify/notify.html.twig' %}
+<div class="container" style="margin-top: 20px;">
     {% block body %}{% endblock %}
-    {% include 'widget/footer.html.twig' %}
 </div>
+<footer class="footer">
+    <div class="container">
+        {% include 'widget/footer.html.twig' %}
+    </div>
+</footer>
 {% include '@Web/script.html.twig' %}
 </body>
 </html>
