@@ -2,7 +2,7 @@
 
 namespace App\Bundle\Dashboard\Web\Controllers;
 
-use php7rails\domain\data\Query;
+use PhpLab\Domain\Data\Query;
 use PhpLab\Sandbox\Article\Domain\Interfaces\PostServiceInterface;
 use PhpLab\Sandbox\Notify\Domain\Entities\EmailEntity;
 use PhpLab\Sandbox\Notify\Domain\Entities\SmsEntity;

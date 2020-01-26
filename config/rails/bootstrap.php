@@ -11,7 +11,7 @@ use php7rails\app\helpers\Env;
     ->addArgument(0)
     ->addArgument(ROOT_DIR . '/common/runtime/symfonyCache');
 
-\App::$container->register('jwt', 'php7extension\crypt\domain\services\JwtService')
+\App::$container->register('jwt', 'PhpLab\Sandbox\Crypt\Services\JwtService')
     ->addMethodCall('setProfiles', [Env::get('encrypt.profiles')]);
 
 /*\App::$container->register('db', 'php7extension\core\db\domain\services\ConnectionService')
@@ -30,10 +30,10 @@ use php7rails\app\helpers\Env;
 
 
 
-/*$domainDefinition = \php7rails\domain\helpers\DomainHelper::getClassConfig('log', 'php7extension\psr\log\Domain');
+/*$domainDefinition = \PhpLab\Domain\Helpers\DomainHelper::getClassConfig('log', 'php7extension\psr\log\Domain');
 
 //d(\PhpLab\Sandbox\Common\Helpers\ClassHelper::createObject($domainDefinition));
 
-//\php7rails\domain\helpers\DomainHelper::getConfigFromDomainClass()
+//\PhpLab\Domain\Helpers\DomainHelper::getConfigFromDomainClass()
 
 \App::$container->register('log', \PhpLab\Sandbox\Common\Helpers\ClassHelper::createObject($domainDefinition));*/

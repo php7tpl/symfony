@@ -4,7 +4,7 @@ namespace App\Bundle\Rails\Web\Controllers;
 
 use App;
 use PhpLab\Sandbox\Common\Libs\Benchmark;
-use php7extension\crypt\domain\entities\JwtEntity;
+use PhpLab\Sandbox\Crypt\Entities\JwtEntity;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class JwtController extends AbstractController

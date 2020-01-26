@@ -69,13 +69,13 @@ $domainsNew =  [
 
     /*'crypt' => [
         'jwt' => [
-            'class' => 'php7extension\crypt\domain\services\JwtService',
+            'class' => 'PhpLab\Sandbox\Crypt\Services\JwtService',
             'profiles' => Env::get('encrypt.profiles'),
         ],
     ],*/
 ];
 
-$domains = \php7rails\domain\helpers\DomainHelper::normalizeDefinitions($domains);
+$domains = \PhpLab\Domain\Helpers\DomainHelper::normalizeDefinitions($domains);
 /*d($domains['log']);
 \App::$container->register('log', $domains['log']);*/
 

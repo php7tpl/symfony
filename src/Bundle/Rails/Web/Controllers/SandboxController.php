@@ -4,10 +4,9 @@ namespace App\Bundle\Rails\Web\Controllers;
 
 use php7extension\bundle\geo\domain\entities\CityEntity;
 use php7extension\yii\db\Query;
-use php7rails\domain\exceptions\UnprocessableEntityHttpException;
-use php7rails\domain\helpers\DomainHelper;
-use php7rails\domain\helpers\factory\RepositoryFactoryHelper;
-use php7rails\domain\helpers\factory\ServiceFactoryHelper;
+use PhpLab\Domain\Exceptions\UnprocessableEntityHttpException;
+use PhpLab\Domain\Helpers\factory\RepositoryFactoryHelper;
+use PhpLab\Domain\Helpers\factory\ServiceFactoryHelper;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class SandboxController extends AbstractController
@@ -90,13 +89,6 @@ class SandboxController extends AbstractController
         $services = ServiceFactoryHelper::genConfigs($services, $domain);
 
         return $this->render('sandbox/index');
-    }
-
-    public function actionRrrr()
-    {
-        $mm = DomainHelper::createDomain('model', 'php7extension\bundle\model\domain\Domain');
-        $all = $mm->book->repository->all();
-        return $this->render('sandbox/index', ['data' => $all]);
     }
 
 }

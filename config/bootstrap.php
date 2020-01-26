@@ -22,4 +22,4 @@ $boot->setAliases([
 ]);*/
 
 /** Объявление констант */
-\php7rails\app\helpers\Constant::setBase();
+\PhpLab\Sandbox\Common\Helpers\Constant::setBase();
