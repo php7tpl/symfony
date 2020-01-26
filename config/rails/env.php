@@ -1,10 +1,10 @@
 <?php
 
 $config = [
-	'servers' => [
-		'db' => [
-			'main' => [
-				'map' => [
+    'servers' => [
+        'db' => [
+            'main' => [
+                'map' => [
 
                     'reference_book' => 'reference.book',
                     'reference_item' => 'reference.item',
@@ -46,13 +46,13 @@ $config = [
                     //'user_security' => '_trash.user_security',
                     //'user_token' => '_trash.user_token',
 
-				],
-			],
+                ],
+            ],
         ],
-	],
-	'client' => [
-		'defaultTimeZone' => 'Asia/Almaty',
-	],
+    ],
+    'client' => [
+        'defaultTimeZone' => 'Asia/Almaty',
+    ],
     'config' => [
         'map' => [
             'params' => [

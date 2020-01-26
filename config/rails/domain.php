@@ -4,7 +4,7 @@ use php7rails\app\helpers\Env;
 
 $domains = [
     'rbac' => 'php7extension\bundle\rbac\domain\Domain',
-    'package' =>  'php7extension\core\package\domain\Domain',
+    'package' => 'php7extension\core\package\domain\Domain',
     //'vendor' =>  'php7tool\vendor\domain\Domain',
     'guide' => 'php7extension\bundle\guide\domain\Domain',
 
@@ -35,7 +35,7 @@ $domains = [
 
 ];
 
-$domainsNew =  [
+$domainsNew = [
     'component' => [
         /*'session' => [
             'class' => 'Symfony\Component\HttpFoundation\Session\Session',

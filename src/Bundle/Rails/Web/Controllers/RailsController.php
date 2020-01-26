@@ -2,8 +2,8 @@
 
 namespace App\Bundle\Rails\Web\Controllers;
 
-use PhpLab\Sandbox\Common\Libs\Benchmark;
 use php7extension\yii\helpers\ArrayHelper;
+use PhpLab\Sandbox\Common\Libs\Benchmark;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 

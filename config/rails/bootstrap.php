@@ -18,18 +18,6 @@ use php7rails\app\helpers\Env;
     ->addMethodCall('setProfiles', \php7rails\app\helpers\Env::get('servers.db'));*/
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 /*$domainDefinition = \PhpLab\Domain\Helpers\DomainHelper::getClassConfig('log', 'php7extension\psr\log\Domain');
 
 //d(\PhpLab\Sandbox\Common\Helpers\ClassHelper::createObject($domainDefinition));
