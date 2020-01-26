@@ -32,8 +32,8 @@ use php7rails\app\helpers\Env;
 
 /*$domainDefinition = \php7rails\domain\helpers\DomainHelper::getClassConfig('log', 'php7extension\psr\log\Domain');
 
-//d(\php7extension\core\helpers\ClassHelper::createObject($domainDefinition));
+//d(\PhpLab\Sandbox\Common\Helpers\ClassHelper::createObject($domainDefinition));
 
 //\php7rails\domain\helpers\DomainHelper::getConfigFromDomainClass()
 
-\App::$container->register('log', \php7extension\core\helpers\ClassHelper::createObject($domainDefinition));*/
+\App::$container->register('log', \PhpLab\Sandbox\Common\Helpers\ClassHelper::createObject($domainDefinition));*/

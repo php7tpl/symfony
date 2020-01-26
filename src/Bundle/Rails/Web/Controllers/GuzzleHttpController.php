@@ -4,8 +4,8 @@ namespace App\Bundle\Rails\Web\Controllers;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Psr7\Response;
-use php7extension\core\develop\helpers\Benchmark;
-use php7extension\core\web\enums\HttpHeaderEnum;
+use PhpLab\Sandbox\Common\Libs\Benchmark;
+use PhpLab\Sandbox\Web\Enums\HttpHeaderEnum;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\HeaderUtils;
 use function GuzzleHttp\Promise\settle;

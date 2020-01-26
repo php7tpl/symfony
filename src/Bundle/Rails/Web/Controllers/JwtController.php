@@ -3,7 +3,7 @@
 namespace App\Bundle\Rails\Web\Controllers;
 
 use App;
-use php7extension\core\develop\helpers\Benchmark;
+use PhpLab\Sandbox\Common\Libs\Benchmark;
 use php7extension\crypt\domain\entities\JwtEntity;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 

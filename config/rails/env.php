@@ -96,4 +96,4 @@ $config = [
 //return $config;
 
 $configFile = __DIR__ . '/../../vendor/php7rails/app/src/config/env.php';
-return \php7extension\core\helpers\Helper::includeConfig($configFile, $config);
+return \PhpLab\Sandbox\Common\Helpers\Helper::includeConfig($configFile, $config);
