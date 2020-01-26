@@ -8,9 +8,6 @@ admin_dashboard:
     prefix: '/admin'
     resource: "../../src/Bundle/Dashboard/Admin/config/routes.yaml"
 
-rails:
-    resource: "../../src/Bundle/Rails/Web/config/routes.yaml"
-
 article:
     resource: "@ArticleBundle/Resources/config/routing/all.yaml"
 
