@@ -5,45 +5,43 @@
         "php": "^7.1.3",
         "ext-ctype": "*",
         "ext-iconv": "*",
-
         "friendsofsymfony/user-bundle": "^2.1",
         "guzzlehttp/guzzle": "^6.3",
-
-        "php7lab/sandbox": "dev-master",
+        "php-ai/php-ml": "^0.8.0",
         "php7lab/domain": "dev-master",
         "php7lab/eloquent": "dev-master",
-        "php7lab/rest": "dev-master",
-        "php7lab/test": "dev-master",
         "php7lab/legacy": "dev-master",
-
+        "php7lab/rest": "dev-master",
+        "php7lab/sandbox": "dev-master",
+        "php7lab/test": "dev-master",
         "sensio/framework-extra-bundle": "^5.1",
-        "symfony/asset": "4.3.*",
-        "symfony/console": "4.3.*",
-        "symfony/dotenv": "4.3.*",
-        "symfony/expression-language": "4.3.*",
+        "symfony/asset": "4.*",
+        "symfony/console": "4.*",
+        "symfony/dotenv": "4.*",
+        "symfony/expression-language": "4.*",
         "symfony/flex": "^1.3.1",
-        "symfony/form": "4.3.*",
-        "symfony/framework-bundle": "4.3.*",
-        "symfony/http-client": "4.3.*",
-        "symfony/intl": "4.3.*",
+        "symfony/form": "4.*",
+        "symfony/framework-bundle": "4.*",
+        "symfony/http-client": "4.*",
+        "symfony/intl": "4.*",
         "symfony/maker-bundle": "^1.13",
         "symfony/monolog-bundle": "^3.1",
         "symfony/orm-pack": "^1.0",
-        "symfony/process": "4.3.*",
-        "symfony/security-bundle": "4.3.*",
+        "symfony/process": "4.*",
+        "symfony/security-bundle": "4.*",
         "symfony/serializer-pack": "*",
         "symfony/swiftmailer-bundle": "^3.1",
-        "symfony/translation": "4.3.*",
-        "symfony/twig-bundle": "4.3.*",
-        "symfony/validator": "4.3.*",
-        "symfony/web-link": "4.3.*",
-        "symfony/yaml": "4.3.*"
+        "symfony/translation": "4.*",
+        "symfony/twig-bundle": "4.*",
+        "symfony/validator": "4.*",
+        "symfony/web-link": "4.*",
+        "symfony/yaml": "4.*"
     },
     "require-dev": {
         "symfony/debug-pack": "*",
         "symfony/profiler-pack": "*",
         "symfony/test-pack": "*",
-        "symfony/web-server-bundle": "4.3.*"
+        "symfony/web-server-bundle": "4.*"
     },
     "config": {
         "secure-http": false,
@@ -89,7 +87,7 @@
     "extra": {
         "symfony": {
             "allow-contrib": false,
-            "require": "4.3.*"
+            "require": "4.*"
         },
         "installer-types": [
             "bower-asset",
