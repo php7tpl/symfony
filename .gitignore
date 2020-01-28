@@ -22,3 +22,6 @@
 ###< symfony/web-server-bundle ###
 
 symfony.lock
+###> phpunit/phpunit ###
+.phpunit.result.cache
+###< phpunit/phpunit ###
