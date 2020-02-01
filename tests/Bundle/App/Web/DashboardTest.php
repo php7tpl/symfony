@@ -58,4 +58,12 @@ class DashboardTest extends BaseRestTest
         $this->assertSubsetText($response, 'Log in');
     }
 
+    public function testNotFound()
+    {
+        $response = $this->sendGet('/qwerty');
+
+        $this->assertEquals(HttpStatusCodeEnum::NOT_FOUND, $response->getStatusCode());
+        $this->assertSubsetText($response, 'No route found');
+    }
+
 }
