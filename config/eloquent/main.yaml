@@ -32,6 +32,7 @@ fixture:
         - /vendor/php7lab/sandbox/src/Messenger/Domain/Fixtures
         - /vendor/php7lab/sandbox/src/User/Domain/Fixtures
         - /vendor/php7lab/sandbox/src/Storage/Domain/Fixtures
+        - /vendor/php7lab/sandbox/src/Bot/Domain/Fixtures
 migrate:
     directory:
         - /vendor/php7lab/sandbox/src/Article/Domain/Migrations
@@ -39,3 +40,4 @@ migrate:
         - /vendor/php7lab/sandbox/src/User/Domain/Migrations
         - /vendor/php7lab/sandbox/src/Queue/Domain/Migrations
         - /vendor/php7lab/sandbox/src/Storage/Domain/Migrations
+        - /vendor/php7lab/sandbox/src/Bot/Domain/Migrations

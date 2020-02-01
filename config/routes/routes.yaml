@@ -14,6 +14,9 @@ article:
 messenger:
     resource: "@MessengerBundle/Resources/config/routing/all.yaml"
 
+bot:
+    resource: "../../vendor/php7lab/sandbox/src/Bot/Api/config/routes.yaml"
+
 user:
     resource: "@UserBundle/Resources/config/routing/all.yaml"
 
