@@ -2,7 +2,7 @@
 
 namespace Tests\Bundle\User\Web;
 
-use PhpLab\Core\Enums\Web\HttpStatusCodeEnum;
+use PhpLab\Core\Enums\Http\HttpStatusCodeEnum;
 use PhpLab\Test\Base\BaseRestTest;
 
 class DashboardTest extends BaseRestTest
