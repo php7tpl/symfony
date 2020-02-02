@@ -11,7 +11,6 @@
         "php7lab/core": "dev-master",
         "php7lab/dev": "dev-master",
         "php7lab/eloquent": "dev-master",
-        "php7lab/legacy": "dev-master",
         "php7lab/rest": "dev-master",
         "php7lab/sandbox": "dev-master",
         "sensio/framework-extra-bundle": "^5.1",
@@ -129,10 +128,6 @@
         {
             "type": "git",
             "url": "https://github.com/php7lab/test.git"
-        },
-        {
-            "type": "git",
-            "url": "https://github.com/php7lab/legacy.git"
         }
     ]
 }
