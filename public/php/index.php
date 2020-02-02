@@ -16,7 +16,7 @@ use Symfony\Component\Routing\Route;
 use Symfony\Component\Routing\RouteCollection;
 
 require __DIR__ . '/../../vendor/autoload.php';
-require __DIR__ . '/../../vendor/php7lab/core/src/App/Libs/bootstrapEnv.php';
+require __DIR__ . '/../../vendor/php7lab/core/src/Libs/Env/bootstrapEnv.php';
 
 // init DB
 $eloquentConfigFile = $_ENV['ELOQUENT_CONFIG_FILE'];
