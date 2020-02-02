@@ -17,6 +17,10 @@ services:
         resource: '../src/*'
         exclude: '../src/{DependencyInjection,Entity,Migrations,Migration,Tests,Kernel.php}'
 
+    PhpLab\Core\:
+        resource: '../vendor/php7lab/core/src/*'
+        exclude: '../vendor/php7lab/core/src/{DependencyInjection,Entity,Migrations,Migration,Tests,Kernel.php}'
+
     PhpLab\Sandbox\:
         resource: '../vendor/php7lab/sandbox/src/*'
         exclude: '../vendor/php7lab/sandbox/src/{DependencyInjection,Entity,Migrations,Migration,Tests,Kernel.php}'

@@ -9,7 +9,7 @@
         "guzzlehttp/guzzle": "^6.3",
         "php-ai/php-ml": "^0.8.0",
         "php7lab/core": "dev-master",
-        "php7lab/domain": "dev-master",
+        "php7lab/dev": "dev-master",
         "php7lab/eloquent": "dev-master",
         "php7lab/legacy": "dev-master",
         "php7lab/rest": "dev-master",
@@ -114,9 +114,9 @@
             "type": "git",
             "url": "https://github.com/php7lab/core.git"
         },
-		{
+        {
             "type": "git",
-            "url": "https://github.com/php7lab/domain.git"
+            "url": "https://github.com/php7lab/dev.git"
         },
         {
             "type": "git",

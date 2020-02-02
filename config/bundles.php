@@ -12,7 +12,7 @@ return [
     Symfony\Bundle\MonologBundle\MonologBundle::class => ['all' => true],
     Symfony\Bundle\DebugBundle\DebugBundle::class => ['dev' => true, 'test' => true],
     Symfony\Bundle\MakerBundle\MakerBundle::class => ['dev' => true],
-    Symfony\Bundle\WebServerBundle\WebServerBundle::class => ['dev' => true],
+    //Symfony\Bundle\WebServerBundle\WebServerBundle::class => ['dev' => true],
     JMS\SerializerBundle\JMSSerializerBundle::class => ['all' => true],
     FOS\RestBundle\FOSRestBundle::class => ['all' => true],
     FOS\UserBundle\FOSUserBundle::class => ['all' => true],
@@ -20,7 +20,7 @@ return [
     PhpLab\Sandbox\Messenger\MessengerBundle::class => ['all' => true],
     PhpLab\Sandbox\User\UserBundle::class => ['all' => true],
     PhpLab\Sandbox\Notify\NotifyBundle::class => ['all' => true],
-    PhpLab\Sandbox\Web\WebBundle::class => ['all' => true],
-    PhpLab\Sandbox\Html\HtmlBundle::class => ['all' => true],
+    PhpLab\Core\Web\WebBundle::class => ['all' => true],
+    PhpLab\Core\Html\HtmlBundle::class => ['all' => true],
     PhpLab\Sandbox\AdminPanel\AdminPanelBundle::class => ['all' => true],
 ];
