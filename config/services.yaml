@@ -53,7 +53,7 @@ services:
         arguments:
             $mainConfigFile: '%env(ELOQUENT_CONFIG_FILE)%'
 
-    PhpLab\Sandbox\Package\Domain\Repositories\File\GroupRepository:
+    PhpLab\Dev\Package\Domain\Repositories\File\GroupRepository:
         arguments:
             $fileName: '%env(ELOQUENT_CONFIG_FILE)%'
 
