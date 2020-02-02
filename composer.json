@@ -8,12 +8,12 @@
         "friendsofsymfony/user-bundle": "^2.1",
         "guzzlehttp/guzzle": "^6.3",
         "php-ai/php-ml": "^0.8.0",
+        "php7lab/core": "dev-master",
         "php7lab/domain": "dev-master",
         "php7lab/eloquent": "dev-master",
         "php7lab/legacy": "dev-master",
         "php7lab/rest": "dev-master",
         "php7lab/sandbox": "dev-master",
-        "php7lab/test": "dev-master",
         "sensio/framework-extra-bundle": "^5.1",
         "symfony/asset": "4.*",
         "symfony/console": "4.*",
@@ -38,6 +38,7 @@
         "symfony/yaml": "4.*"
     },
     "require-dev": {
+        "php7lab/test": "dev-master",
         "symfony/debug-pack": "*",
         "symfony/profiler-pack": "*",
         "symfony/test-pack": "*",
@@ -110,6 +111,10 @@
             "url": "https://github.com/php7lab/sandbox.git"
         },
         {
+            "type": "git",
+            "url": "https://github.com/php7lab/core.git"
+        },
+		{
             "type": "git",
             "url": "https://github.com/php7lab/domain.git"
         },
