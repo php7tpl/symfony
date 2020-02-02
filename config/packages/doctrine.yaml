@@ -33,6 +33,6 @@ doctrine:
             User:
                 is_bundle: false
                 type: annotation
-                dir: '%kernel.project_dir%/vendor/php7lab/sandbox/src/User/Domain/Entities'
-                prefix: 'PhpLab\Sandbox\User\Domain\Entities'
+                dir: '%kernel.project_dir%/vendor/php7lab/bundle/src/User/Domain/Entities'
+                prefix: 'PhpLab\Bundle\User\Domain\Entities'
                 alias: App

@@ -18,7 +18,7 @@ return [
     FOS\UserBundle\FOSUserBundle::class => ['all' => true],
     PhpLab\Sandbox\Article\ArticleBundle::class => ['all' => true],
     PhpLab\Sandbox\Messenger\MessengerBundle::class => ['all' => true],
-    PhpLab\Sandbox\User\UserBundle::class => ['all' => true],
+    PhpLab\Bundle\User\UserBundle::class => ['all' => true],
     PhpLab\Sandbox\Notify\NotifyBundle::class => ['all' => true],
     PhpLab\Web\WebBundle::class => ['all' => true],
     PhpLab\Sandbox\AdminPanel\AdminPanelBundle::class => ['all' => true],
