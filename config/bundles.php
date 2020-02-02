@@ -20,7 +20,6 @@ return [
     PhpLab\Sandbox\Messenger\MessengerBundle::class => ['all' => true],
     PhpLab\Sandbox\User\UserBundle::class => ['all' => true],
     PhpLab\Sandbox\Notify\NotifyBundle::class => ['all' => true],
-    PhpLab\Core\Web\WebBundle::class => ['all' => true],
-    PhpLab\Core\Html\HtmlBundle::class => ['all' => true],
+    PhpLab\Web\WebBundle::class => ['all' => true],
     PhpLab\Sandbox\AdminPanel\AdminPanelBundle::class => ['all' => true],
 ];

@@ -1,9 +1,9 @@
 <?php
 
 use App\Kernel;
+use PhpLab\Rest\Helpers\CorsHelper;
 use Symfony\Component\Debug\Debug;
 use Symfony\Component\HttpFoundation\Request;
-use PhpLab\Core\Web\Helpers\CorsHelper;
 
 require dirname(__DIR__).'/../config/bootstrap.php';
 
