@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Bundle\Messenger\Controller;
+namespace Tests\Messenger\Api;
 
 class ChatControllerTest extends \PhpLab\Sandbox\Tests\rest\Messenger\ChatControllerTest
 {
