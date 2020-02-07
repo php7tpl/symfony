@@ -1,13 +1,15 @@
 wsdl_definition:
-    path: /wsdl-service/{name}.wsdl
+    path: /definition/{name}.wsdl
     controller: App\Bundle\Dashboard\Web\Controllers\HelloServiceController::definition
-#    requirements:
-#        name: '.+'
+    requirements:
+        name: '.+'
 
 wsdl_run:
-    path: /wsdl
+    path: /handle/{name}
     controller: App\Bundle\Dashboard\Web\Controllers\HelloServiceController::handle
+    requirements:
+        name: '.+'
 
 wsdl_test:
-    path: /wsdl-test
+    path: /test
     controller: App\Bundle\Dashboard\Web\Controllers\HelloServiceController::test

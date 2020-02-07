@@ -54,11 +54,11 @@ class HelloServiceController extends AbstractController
 
     public function test()
     {
-        /** @var HelloInterface $soapClient */
-        $soapClient = new \SoapClient('http://symfony.tpl/wsdl-service/hello.wsdl');
-        //dd($soapClient->__getFunctions());
-        $helloResult = $soapClient->hello('Scott');
-        $method1Result = $soapClient->method1('Scott');
+        /** @var HelloInterface $helloService */
+        $helloService = new \SoapClient('http://symfony.tpl/wsdl/definition/hello.wsdl');
+        //dd($helloService->__getFunctions());
+        $helloResult = $helloService->hello('Scott');
+        $method1Result = $helloService->method1('Scott');
         dd([$helloResult, $method1Result]);
     }
 

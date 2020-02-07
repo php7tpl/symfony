@@ -24,4 +24,5 @@ fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
 
 wsdl:
+    prefix: '/wsdl'
     resource: "../../src/Bundle/Dashboard/Web/config/routes.yaml"
