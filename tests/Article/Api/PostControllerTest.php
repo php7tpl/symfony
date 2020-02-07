@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Bundle\Article\Controller;
+namespace Tests\Article\Api;
 
 class PostControllerTest extends \PhpLab\Sandbox\Tests\rest\Article\PostControllerTest
 {

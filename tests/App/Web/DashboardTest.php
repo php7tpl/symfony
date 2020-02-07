@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Bundle\User\Web;
+namespace Tests\User\Web;
 
 use PhpLab\Core\Enums\Http\HttpStatusCodeEnum;
 use PhpLab\Test\Base\BaseRestTest;

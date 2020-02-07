@@ -10,7 +10,6 @@
         "php-ai/php-ml": "^0.8.0",
         "php7lab/core": "dev-master",
         "php7lab/web": "dev-master",
-        "php7lab/dev": "dev-master",
         "php7lab/eloquent": "dev-master",
         "php7lab/bundle": "dev-master",
         "php7lab/rest": "dev-master",
@@ -31,6 +30,7 @@
         "symfony/web-link": "4.*"
     },
     "require-dev": {
+        "php7lab/dev": "dev-master",
         "php7lab/test": "dev-master",
         "symfony/debug-pack": "*",
         "symfony/profiler-pack": "*",

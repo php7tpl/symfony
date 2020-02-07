@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Bundle\User\Controller;
+namespace Tests\User\Api;
 
 class AuthControllerTest extends \PhpLab\Bundle\Tests\rest\User\AuthControllerTest
 {
