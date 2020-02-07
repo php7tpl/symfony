@@ -5,6 +5,7 @@ namespace App\Bundle\Dashboard\Web\Controllers;
 use PhpLab\Core\Enums\Http\HttpHeaderEnum;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
+use PHP2WSDL\PHPClass2WSDL;
 
 class HelloServiceController extends AbstractController
 {
@@ -17,10 +18,19 @@ class HelloServiceController extends AbstractController
         $this->services['hello'] = new HelloService;
     }
 
+    private function generateWsdlFromService(object $serviceInstance): string {
+        $serviceURI = "http://symfony.tpl/wsdl";
+        $wsdlGenerator = new PHPClass2WSDL($serviceInstance, $serviceURI);
+        $wsdlGenerator->generateWSDL(true);
+        $content = $wsdlGenerator->dump();
+        return $content;
+    }
+
     public function definition(string $name)
     {
         $response = new Response;
         $response->headers->set(HttpHeaderEnum::CONTENT_TYPE, 'text/xml');
+        //$content = $this->generateWsdlFromService($this->services[$name]);
         $content = file_get_contents($this->getDefinitionFileName($name));
         $response->setContent($content);
         return $response;
@@ -28,10 +38,13 @@ class HelloServiceController extends AbstractController
 
     public function handle(string $name = 'hello')
     {
+        //$content = $this->generateWsdlFromService($this->services[$name]);
+        //file_put_contents($this->getDefinitionFileName($name), $content);
         $soapServer = new \SoapServer($this->getDefinitionFileName($name));
+        //$soapServer = new \SoapServer($this->getDefinitionFileName($name));
         $serviceInstance = $this->services[$name];
         $soapServer->setObject($serviceInstance);
-        $response = new Response();
+        $response = new Response;
         $response->headers->set('Content-Type', 'text/xml; charset=ISO-8859-1');
         ob_start();
         $soapServer->handle();
@@ -43,8 +56,10 @@ class HelloServiceController extends AbstractController
     {
         /** @var HelloInterface $soapClient */
         $soapClient = new \SoapClient('http://symfony.tpl/wsdl-service/hello.wsdl');
-        $result = $soapClient->hello('Scott');
-        dd($result);
+        //dd($soapClient->__getFunctions());
+        $helloResult = $soapClient->hello('Scott');
+        $method1Result = $soapClient->method1('Scott');
+        dd([$helloResult, $method1Result]);
     }
 
     private function getDefinitionFileName(string $serviceName) {
@@ -53,14 +68,29 @@ class HelloServiceController extends AbstractController
 
 }
 
+class HelloEntity {
+
+    public $message;
+
+}
+
 interface HelloInterface {
-    public function hello(string $name): string;
+    public function hello(string $name): array;
+    public function method1(string $name): string;
 }
 
 class HelloService implements HelloInterface
 {
-    public function hello(string $name): string
+    public function hello(string $name): array
     {
-        return 'Hello, ' . $name;
+        return [
+            'Hello, ' . $name,
+            'WTF???',
+        ];
+    }
+
+    public function method1(string $name): string
+    {
+        return 'method1, ' . $name;
     }
 }
