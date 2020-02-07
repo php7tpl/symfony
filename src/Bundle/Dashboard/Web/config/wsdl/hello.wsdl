@@ -18,7 +18,7 @@
     </message>
 
     <message name="testService-helloResponse">
-        <part name="return" type="xsd:array"/>
+        <part name="return" type="soap-enc:Array"/>
     </message>
 
     <portType name="testServicePortType-hello">
@@ -50,7 +50,7 @@
     </message>
 
     <message name="testService-method1Response">
-        <part name="return" type="xsd:array"/>
+        <part name="return" type="xsd:string"/>
     </message>
 
     <portType name="testServicePortType-method1">
