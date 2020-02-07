@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<definitions
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:tns="urn:arnleadservicewsdl"
+        xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+        xmlns="http://schemas.xmlsoap.org/wsdl/"
+        targetNamespace="urn:helloservicewsdl">
+
+    <types>
+        <xsd:schema targetNamespace="urn:helloService">
+            <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+            <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/"/>
+        </xsd:schema>
+    </types>
+
+    <message name="helloRequest">
+        <part name="name" type="xsd:string"/>
+    </message>
+
+    <message name="helloResponse">
+        <part name="return" type="xsd:string"/>
+    </message>
+
+    <portType name="helloServicePortType">
+        <operation name="hello">
+            <documentation>Hello World</documentation>
+            <input message="tns:helloRequest"/>
+            <output message="tns:helloResponse"/>
+        </operation>
+    </portType>
+
+    <binding name="helloServiceBinding" type="tns:helloServicePortType">
+        <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="hello">
+            <soap:operation soapAction="urn:arnleadservicewsdl#hello" style="rpc"/>
+
+            <input>
+                <soap:body use="encoded" namespace="urn:helloService"
+                           encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+            </input>
+
+            <output>
+                <soap:body use="encoded" namespace="urn:helloService"
+                           encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+            </output>
+        </operation>
+    </binding>
+
+    <service name="helloService">
+        <port name="helloServicePort" binding="tns:helloServiceBinding">
+            <soap:address location="http://symfony.tpl/wsdl"/>
+        </port>
+    </service>
+</definitions>
