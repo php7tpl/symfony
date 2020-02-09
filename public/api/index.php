@@ -2,8 +2,10 @@
 
 use App\Kernel;
 use Illuminate\Support\Collection;
-use PhpLab\Bundle\Crypt\Libs\Encoder;
+use PhpLab\Bundle\Crypt\Libs\Encoders\AesEncoder;
 use PhpLab\Bundle\Crypt\Libs\Encoders\Base64Encoder;
+use PhpLab\Bundle\Crypt\Libs\Encoders\CollectionEncoder;
+use PhpLab\Bundle\Crypt\Libs\Encoders\GzEncoder;
 use PhpLab\Bundle\Crypt\Libs\Encoders\JsonEncoder;
 use PhpLab\Rest\Helpers\CorsHelper;
 use PhpLab\Rest\Libs\RestProto;
@@ -14,9 +16,11 @@ require dirname(__DIR__) . '/../config/bootstrap.php';
 
 $encoderCollection = new Collection([
     new JsonEncoder,
+    new AesEncoder('qwerty'),
+    new GzEncoder,
     new Base64Encoder,
 ]);
-$encoder = new Encoder($encoderCollection);
+$encoder = new CollectionEncoder($encoderCollection);
 $crypt = new RestProto($encoder, $_SERVER);
 $crypt->prepareRequest();
 

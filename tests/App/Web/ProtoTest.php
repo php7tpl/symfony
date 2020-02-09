@@ -2,17 +2,15 @@
 
 namespace Tests\User\Web;
 
-use GuzzleHttp\Psr7\Response;
-use GuzzleHttp\RequestOptions;
 use Illuminate\Support\Collection;
-use PhpLab\Bundle\Crypt\Libs\Encoder;
+use PhpLab\Bundle\Crypt\Libs\Encoders\AesEncoder;
 use PhpLab\Bundle\Crypt\Libs\Encoders\Base64Encoder;
+use PhpLab\Bundle\Crypt\Libs\Encoders\CollectionEncoder;
 use PhpLab\Bundle\Crypt\Libs\Encoders\EncoderInterface;
+use PhpLab\Bundle\Crypt\Libs\Encoders\GzEncoder;
 use PhpLab\Bundle\Crypt\Libs\Encoders\JsonEncoder;
-use PhpLab\Core\Domain\Helpers\EntityHelper;
 use PhpLab\Core\Enums\Http\HttpStatusCodeEnum;
-use PhpLab\Rest\Entities\ProtoEntity;
-use PhpLab\Rest\Libs\RestProto;
+use PhpLab\Rest\Libs\RestProtoClient;
 use PhpLab\Test\Base\BaseRestTest;
 
 class ProtoTest extends BaseRestTest
@@ -22,55 +20,54 @@ class ProtoTest extends BaseRestTest
 
     public function testMainPage()
     {
-        $protoEntity = $this->protoRequest('GET', '/api/v1/article', ['id' => 123]);
-        $body = json_decode($protoEntity->content, true);
-        $response = new Response($protoEntity->statusCode, $protoEntity->headers);
-        $this->assertEquals(HttpStatusCodeEnum::OK, $response->getStatusCode());
-        $this->assertEquals([[
-            "id" => 123,
-            "category_id" => 3,
-            "title" => "post 123",
-            "category" => null,
-            "created_at" => "2019-11-05T20:23:00+03:00",
-            "tags" => null,
-        ]], $body);
+        $restProtoClient = $this->getProtoClient();
+        $protoEntity = $restProtoClient->request('GET', '/api/v1/article', ['category_id' => 2, 'per-page' => 3]);
+
+        $this->assertEquals(HttpStatusCodeEnum::OK, $protoEntity->statusCode);
+        $this->assertEquals([
+            [
+                "id" => 2,
+                "category_id" => 2,
+                "title" => "post 2",
+                "category" => null,
+                "created_at" => "2019-11-05T20:23:00+03:00",
+                "tags" => null,
+            ],
+            [
+                "id" => 5,
+                "category_id" => 2,
+                "title" => "post 5",
+                "category" => null,
+                "created_at" => "2019-11-05T20:23:00+03:00",
+                "tags" => null,
+            ],
+            [
+                "id" => 8,
+                "category_id" => 2,
+                "title" => "post 8",
+                "category" => null,
+                "created_at" => "2019-11-05T20:23:00+03:00",
+                "tags" => null,
+            ],
+        ], $protoEntity->getData());
     }
 
-    private function protoRequest(string $method, string $uri, array $query = [], array $body = [])
+    private function getProtoClient(): RestProtoClient
     {
-        $encoder = $this->getEncoder();
-        $client = $this->getGuzzleClient();
-
-        $requestProtoEntity = new ProtoEntity;
-        $requestProtoEntity->method = $method;
-        $requestProtoEntity->uri = $uri;
-        $requestProtoEntity->headers = ['Content-Type' => 'application/x-base64'];
-        $requestProtoEntity->query = $query;
-
-        $encodedRequest = $encoder->encode($requestProtoEntity);
-        $response = $client->request('POST', '/api/', [
-            RequestOptions::HEADERS => [
-                RestProto::CRYPT_HEADER_NAME => 1,
-            ],
-            RequestOptions::FORM_PARAMS => [
-                'data' => $encodedRequest,
-            ],
-        ]);
-        $encodedContent = $response->getBody()->getContents();
-        $payload = $encoder->decode($encodedContent);
-        $protoEntity = new ProtoEntity;
-        EntityHelper::setAttributes($protoEntity, $payload);
-        return $protoEntity;
+        $endpoint = rtrim($this->baseUrl, '/') . '/api/';
+        $restProtoClient = new RestProtoClient($endpoint, $this->getEncoder());
+        return $restProtoClient;
     }
 
     private function getEncoder(): EncoderInterface
     {
         $encoderCollection = new Collection([
             new JsonEncoder,
+            new AesEncoder('qwerty'),
+            new GzEncoder,
             new Base64Encoder,
         ]);
-        $encoder = new Encoder($encoderCollection);
+        $encoder = new CollectionEncoder($encoderCollection);
         return $encoder;
     }
-
 }
