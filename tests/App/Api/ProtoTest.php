@@ -10,6 +10,7 @@ use PhpLab\Bundle\Crypt\Libs\Encoders\EncoderInterface;
 use PhpLab\Bundle\Crypt\Libs\Encoders\GzEncoder;
 use PhpLab\Bundle\Crypt\Libs\Encoders\JsonEncoder;
 use PhpLab\Core\Enums\Http\HttpStatusCodeEnum;
+use PhpLab\Rest\Helpers\RestHelper;
 use PhpLab\Rest\Libs\RestProtoClient;
 use PhpLab\Test\Base\BaseRestTest;
 
@@ -21,9 +22,10 @@ class ProtoTest extends BaseRestTest
     public function testMainPage()
     {
         $restProtoClient = $this->getProtoClient();
-        $protoEntity = $restProtoClient->request('GET', '/api/v1/article', ['category_id' => 2, 'per-page' => 3]);
+        $response = $restProtoClient->request('GET', '/api/v1/article', ['category_id' => 2, 'per-page' => 3]);
+        $data = RestHelper::getDataFromResponse($response);
 
-        $this->assertEquals(HttpStatusCodeEnum::OK, $protoEntity->statusCode);
+        $this->assertEquals(HttpStatusCodeEnum::OK, $response->getStatusCode());
         $this->assertEquals([
             [
                 "id" => 2,
@@ -49,7 +51,7 @@ class ProtoTest extends BaseRestTest
                 "created_at" => "2019-11-05T20:23:00+03:00",
                 "tags" => null,
             ],
-        ], $protoEntity->getData());
+        ], $data);
     }
 
     private function getProtoClient(): RestProtoClient
