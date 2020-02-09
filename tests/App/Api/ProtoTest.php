@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\User\Web;
+namespace Tests\User\Api;
 
 use Illuminate\Support\Collection;
 use PhpLab\Bundle\Crypt\Libs\Encoders\AesEncoder;
