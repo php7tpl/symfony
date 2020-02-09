@@ -63,7 +63,7 @@ class ProtoTest extends BaseRestTest
     {
         $encoderCollection = new Collection([
             new JsonEncoder,
-            new AesEncoder('qwerty'),
+            new AesEncoder($_ENV['AES_ENCODER_KEY']),
             new GzEncoder,
             new Base64Encoder,
         ]);

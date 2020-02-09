@@ -16,13 +16,13 @@ require dirname(__DIR__) . '/../config/bootstrap.php';
 
 $encoderCollection = new Collection([
     new JsonEncoder,
-    new AesEncoder('qwerty'),
+    new AesEncoder($_ENV['AES_ENCODER_KEY']),
     new GzEncoder,
     new Base64Encoder,
 ]);
 $encoder = new CollectionEncoder($encoderCollection);
-$crypt = new RestProto($encoder, $_SERVER);
-$crypt->prepareRequest();
+$restProto = new RestProto($encoder, $_SERVER);
+$restProto->prepareRequest();
 
 CorsHelper::autoload();
 
@@ -43,6 +43,6 @@ if ($trustedHosts = $_SERVER['TRUSTED_HOSTS'] ?? $_ENV['TRUSTED_HOSTS'] ?? false
 $kernel = new Kernel($_SERVER['APP_ENV'], (bool) $_SERVER['APP_DEBUG']);
 $request = Request::createFromGlobals();
 $response = $kernel->handle($request);
-$response = $crypt->encodeResponse($response);
+$response = $restProto->encodeResponse($response);
 $response->send();
 $kernel->terminate($request, $response);
