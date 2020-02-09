@@ -12,7 +12,7 @@ use PhpLab\Bundle\Crypt\Libs\Encoders\JsonEncoder;
 use PhpLab\Core\Enums\Http\HttpStatusCodeEnum;
 use PhpLab\Rest\Helpers\RestHelper;
 use PhpLab\Sandbox\Proto\Transports\ProtoHttpTransport;
-use PhpLab\Sandbox\Proto\Libs\RestProtoClient;
+use PhpLab\Sandbox\Proto\Libs\ProtoClient;
 use PhpLab\Test\Base\BaseRestTest;
 
 class ProtoTest extends BaseRestTest
@@ -22,8 +22,8 @@ class ProtoTest extends BaseRestTest
 
     public function testMainPage()
     {
-        $restProtoClient = $this->getProtoClient();
-        $response = $restProtoClient->request('GET', '/api/v1/article', ['category_id' => 2, 'per-page' => 3]);
+        $protoClient = $this->getProtoClient();
+        $response = $protoClient->request('GET', '/api/v1/article', ['category_id' => 2, 'per-page' => 3]);
         $data = RestHelper::getDataFromResponse($response);
 
         $this->assertEquals(HttpStatusCodeEnum::OK, $response->getStatusCode());
@@ -55,12 +55,12 @@ class ProtoTest extends BaseRestTest
         ], $data);
     }
 
-    private function getProtoClient(): RestProtoClient
+    private function getProtoClient(): ProtoClient
     {
         $endpoint = rtrim($this->baseUrl, '/') . '/api/';
         $transport = new ProtoHttpTransport($endpoint);
-        $restProtoClient = new RestProtoClient($transport, $this->getEncoder());
-        return $restProtoClient;
+        $protoClient = new ProtoClient($transport, $this->getEncoder());
+        return $protoClient;
     }
 
     private function getEncoder(): EncoderInterface
