@@ -35,6 +35,6 @@ api_user:
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
 
-wsdl:
+api_wsdl:
     prefix: '/wsdl'
-    resource: "../../src/Bundle/Dashboard/Web/config/routes.yaml"
+    resource: "@WsdlBundle/Api/config/routes.yaml"
