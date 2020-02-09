@@ -35,6 +35,9 @@ services:
     PhpLab\Sandbox\Article\Api\Controllers\ArticleController:
         tags: ['controller.service_arguments']
 
+    PhpLab\Sandbox\Storage\Api\Controllers\FileController:
+        tags: ['controller.service_arguments']
+
     PhpLab\Sandbox\Article\Web\Controllers\ArticleController:
         tags: ['controller.service_arguments']
 

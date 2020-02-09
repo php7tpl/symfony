@@ -8,17 +8,29 @@ admin_dashboard:
     prefix: '/admin'
     resource: "../../src/Bundle/Dashboard/Admin/config/routes.yaml"
 
-article:
-    resource: "@ArticleBundle/Resources/config/routing/all.yaml"
+api_article:
+    prefix: '/v1/article'
+    resource: "@ArticleBundle/Api/config/routes.yaml"
 
-messenger:
-    resource: "@MessengerBundle/Resources/config/routing/all.yaml"
+web_article:
+    resource: "@ArticleBundle/Web/config/routes.yaml"
+
+api_storage:
+    prefix: '/v1/storage-file'
+    resource: "@StorageBundle/Api/config/routes.yaml"
+
+api_messenger:
+    prefix: '/v1/messenger-chat'
+    resource: "@MessengerBundle/Api/config/routes.yaml"
+
+web_messenger:
+    resource: "@MessengerBundle/Web/config/routes.yaml"
 
 bot:
     resource: "../../vendor/php7lab/sandbox/src/Bot/Api/config/routes.yaml"
 
-user:
-    resource: "@UserBundle/Resources/config/routing/all.yaml"
+api_user:
+    resource: "@UserBundle/Api/config/routes.yaml"
 
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
