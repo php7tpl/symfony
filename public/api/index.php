@@ -8,7 +8,7 @@ use PhpLab\Bundle\Crypt\Libs\Encoders\CollectionEncoder;
 use PhpLab\Bundle\Crypt\Libs\Encoders\GzEncoder;
 use PhpLab\Bundle\Crypt\Libs\Encoders\JsonEncoder;
 use PhpLab\Rest\Helpers\CorsHelper;
-use PhpLab\Rest\Libs\RestProto;
+use PhpLab\Sandbox\Proto\Libs\RestProto;
 use Symfony\Component\Debug\Debug;
 use Symfony\Component\HttpFoundation\Request;
 

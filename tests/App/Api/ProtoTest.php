@@ -11,8 +11,8 @@ use PhpLab\Bundle\Crypt\Libs\Encoders\GzEncoder;
 use PhpLab\Bundle\Crypt\Libs\Encoders\JsonEncoder;
 use PhpLab\Core\Enums\Http\HttpStatusCodeEnum;
 use PhpLab\Rest\Helpers\RestHelper;
-use PhpLab\Rest\Libs\ProtoHttpTransport;
-use PhpLab\Rest\Libs\RestProtoClient;
+use PhpLab\Sandbox\Proto\Transports\ProtoHttpTransport;
+use PhpLab\Sandbox\Proto\Libs\RestProtoClient;
 use PhpLab\Test\Base\BaseRestTest;
 
 class ProtoTest extends BaseRestTest
