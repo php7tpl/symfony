@@ -11,6 +11,7 @@ use PhpLab\Bundle\Crypt\Libs\Encoders\GzEncoder;
 use PhpLab\Bundle\Crypt\Libs\Encoders\JsonEncoder;
 use PhpLab\Core\Enums\Http\HttpStatusCodeEnum;
 use PhpLab\Rest\Helpers\RestHelper;
+use PhpLab\Rest\Libs\ProtoHttpTransport;
 use PhpLab\Rest\Libs\RestProtoClient;
 use PhpLab\Test\Base\BaseRestTest;
 
@@ -57,7 +58,8 @@ class ProtoTest extends BaseRestTest
     private function getProtoClient(): RestProtoClient
     {
         $endpoint = rtrim($this->baseUrl, '/') . '/api/';
-        $restProtoClient = new RestProtoClient($endpoint, $this->getEncoder());
+        $transport = new ProtoHttpTransport($endpoint);
+        $restProtoClient = new RestProtoClient($transport, $this->getEncoder());
         return $restProtoClient;
     }
 
