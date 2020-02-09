@@ -2,7 +2,7 @@
 
 namespace Tests\User\Api;
 
-use App\Bundle\Dashboard\Web\Controllers\HelloInterface;
+use PhpLab\Sandbox\Wsdl\Api\Controllers\HelloInterface;
 use PhpLab\Test\Base\BaseRestTest;
 
 class WsdlTest extends BaseRestTest
