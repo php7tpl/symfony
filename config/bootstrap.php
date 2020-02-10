@@ -1,7 +1,8 @@
 <?php
 
 require __DIR__ . '/../vendor/autoload.php';
-require __DIR__ . '/../vendor/php7lab/core/src/Libs/Env/bootstrapEnv.php';
+
+\PhpLab\Core\Libs\Env\DotEnvHelper::init();
 
 $_SERVER += $_ENV;
 $_SERVER['APP_ENV'] = $_ENV['APP_ENV'] = ($_SERVER['APP_ENV'] ?? $_ENV['APP_ENV'] ?? null) ?: 'dev';

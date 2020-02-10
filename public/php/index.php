@@ -1,5 +1,8 @@
 <?php
 
 require __DIR__ . '/../../vendor/autoload.php';
-require __DIR__ . '/../../vendor/php7lab/core/src/Libs/Env/bootstrapEnv.php';
-require __DIR__ . '/../../vendor/php7lab/sandbox/src/Article/Api/config/bootstrap.php';
+
+\PhpLab\Core\Libs\Env\DotEnvHelper::init();
+
+$module = new \PhpLab\Sandbox\Article\Api\ArticleModule;
+$module->run();
