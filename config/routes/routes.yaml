@@ -3,11 +3,11 @@
 
 api_root:
     path: 'api'
-    controller: App\Bundle\Dashboard\Api\Controllers\DefaultController::root
+    controller: App\Bundle\Dashboard\Api\Controllers\DefaultController::needVersion
 
 api_version:
-    path: 'api/v1'
-    controller: App\Bundle\Dashboard\Api\Controllers\DefaultController::index
+    path: 'api/v{version}'
+    controller: App\Bundle\Dashboard\Api\Controllers\DocController::show
 
 api_article:
     prefix: 'api/v1'
