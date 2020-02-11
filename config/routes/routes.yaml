@@ -1,23 +1,32 @@
 
 # API
 
+api_root:
+    path: 'api'
+    controller: App\Bundle\Dashboard\Api\Controllers\DefaultController::root
+
+api_version:
+    path: 'api/v1'
+    controller: App\Bundle\Dashboard\Api\Controllers\DefaultController::index
+
 api_article:
-    prefix: 'v1'
+    prefix: 'api/v1'
     resource: "@ArticleBundle/Api/config/routes.yaml"
 
 api_storage:
-    prefix: 'v1'
+    prefix: 'api/v1'
     resource: "@StorageBundle/Api/config/routes.yaml"
 
 api_messenger:
-    prefix: 'v1'
+    prefix: 'api/v1'
     resource: "@MessengerBundle/Api/config/routes.yaml"
 
 api_user:
+    prefix: 'api/v1'
     resource: "@UserBundle/Api/config/routes.yaml"
 
 api_bot:
-    prefix: 'v1'
+    prefix: 'api/v1'
     resource: "../../vendor/php7lab/sandbox/src/Bot/Api/config/routes.yaml"
 
 # Web
