@@ -1,40 +1,48 @@
 
-# main page
-default:
-    path: /
-    controller: App\Bundle\Dashboard\Web\Controllers\MainController::index
-
-admin_dashboard:
-    prefix: '/admin'
-    resource: "../../src/Bundle/Dashboard/Admin/config/routes.yaml"
+# API
 
 api_article:
-    prefix: '/v1/article'
+    prefix: 'v1'
     resource: "@ArticleBundle/Api/config/routes.yaml"
 
-web_article:
-    resource: "@ArticleBundle/Web/config/routes.yaml"
-
 api_storage:
-    prefix: '/v1/storage-file'
+    prefix: 'v1'
     resource: "@StorageBundle/Api/config/routes.yaml"
 
 api_messenger:
-    prefix: '/v1/messenger-chat'
+    prefix: 'v1'
     resource: "@MessengerBundle/Api/config/routes.yaml"
-
-web_messenger:
-    resource: "@MessengerBundle/Web/config/routes.yaml"
-
-bot:
-    resource: "../../vendor/php7lab/sandbox/src/Bot/Api/config/routes.yaml"
 
 api_user:
     resource: "@UserBundle/Api/config/routes.yaml"
 
+api_bot:
+    prefix: 'v1'
+    resource: "../../vendor/php7lab/sandbox/src/Bot/Api/config/routes.yaml"
+
+# Web
+
+default:
+    path: /
+    controller: App\Bundle\Dashboard\Web\Controllers\MainController::index
+
+web_article:
+    resource: "@ArticleBundle/Web/config/routes.yaml"
+
+web_messenger:
+    resource: "@MessengerBundle/Web/config/routes.yaml"
+
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
 
+# Admin panel
+
+admin_dashboard:
+    prefix: 'admin'
+    resource: "../../src/Bundle/Dashboard/Admin/config/routes.yaml"
+
+# WSDL
+
 api_wsdl:
-    prefix: '/wsdl'
+    prefix: 'wsdl'
     resource: "@WsdlBundle/Api/config/routes.yaml"
