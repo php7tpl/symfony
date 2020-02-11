@@ -33,6 +33,7 @@
     "require-dev": {
         "php7lab/dev": "dev-master",
         "php7lab/test": "dev-master",
+        "zndoc/rest-api": "dev-master",
         "symfony/debug-pack": "*",
         "symfony/profiler-pack": "*",
         "symfony/test-pack": "*",
