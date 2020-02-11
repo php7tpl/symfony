@@ -1,0 +1,18 @@
+#%RAML 1.0
+title: Example host
+description: "API основано на контрактах - https://github.com/zndoc/rest-api/blob/master/docs/contract/README.md"
+version: v1
+protocols: [ HTTP, HTTPS ]
+baseUri: http://api.example.com/v1
+mediaType: [ application/json ]
+securitySchemes: !include ../../../../vendor/zndoc/rest-api/src/securitySchemes/index.raml
+traits: !include ../../../../vendor/zndoc/rest-api/src/traits/index.raml
+
+/auth: !include ../../../../vendor/php7lab/bundle/docs/api/user/auth/api.raml
+#/registration: !include ../../../../vendor/php7lab/bundle/docs/api/user/registration/api.raml
+#/restore-password: !include ../../../../vendor/php7lab/bundle/docs/api/user/restore-password/api.raml
+#/security/password: !include ../../../../vendor/php7lab/bundle/docs/api/user/change-password/api.raml
+#/security/email: !include ../../../../vendor/php7lab/bundle/docs/api/user/change-email/api.raml
+
+/article-post: !include ../../../../vendor/php7lab/sandbox/docs/api/article/post/api.raml
+/storage-file: !include ../../../../vendor/php7lab/sandbox/docs/api/storage/file/api.raml
