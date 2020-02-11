@@ -1,9 +1,12 @@
 #%RAML 1.0
 title: Example host
-description: "API основано на контрактах - https://github.com/zndoc/rest-api/blob/master/docs/contract/README.md"
+description: ""
+documentation:
+ - title: Введение
+   content: !include ../../../../vendor/zndoc/rest-api/src/traits/intro.markdown
 version: v1
 protocols: [ HTTP, HTTPS ]
-baseUri: http://api.example.com/v1
+baseUri: http://api.example.com/api/v1
 mediaType: [ application/json ]
 securitySchemes: !include ../../../../vendor/zndoc/rest-api/src/securitySchemes/index.raml
 traits: !include ../../../../vendor/zndoc/rest-api/src/traits/index.raml
