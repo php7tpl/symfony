@@ -54,8 +54,8 @@ class MainController extends AbstractController
                     'url' => '/api/v1/rbac',
                 ],
                 [
-                    'title' => 'API - article',
-                    'url' => '/api/v1/article',
+                    'title' => 'API - article-post',
+                    'url' => '/api/v1/article-post',
                 ],
                 [
                     'title' => 'Web - messenger-chat',
@@ -66,8 +66,8 @@ class MainController extends AbstractController
                     'url' => '/api/v1/messenger-chat',
                 ],
                 [
-                    'title' => 'API - article (PHP)',
-                    'url' => '/php/v1/article',
+                    'title' => 'API - article-post (PHP)',
+                    'url' => '/php/v1/article-post',
                 ],
 
                 [
