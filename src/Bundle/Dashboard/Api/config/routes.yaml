@@ -1,8 +1,0 @@
-
-api_root:
-    path: '/'
-    controller: App\Bundle\Dashboard\Api\Controllers\DocController::index
-
-api_version:
-    path: 'v{version}'
-    controller: App\Bundle\Dashboard\Api\Controllers\DocController::show

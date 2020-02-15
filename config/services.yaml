@@ -32,29 +32,29 @@ services:
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
 
-    PhpLab\Sandbox\Article\Api\Controllers\ArticleController:
-        tags: ['controller.service_arguments']
+#    PhpLab\Sandbox\Article\Api\Controllers\ArticleController:
+#        tags: ['controller.service_arguments']
+#
+#    PhpLab\Sandbox\Storage\Api\Controllers\FileController:
+#        tags: ['controller.service_arguments']
+#
+#    PhpLab\Sandbox\Article\Web\Controllers\ArticleController:
+#        tags: ['controller.service_arguments']
+#
+#    PhpLab\Sandbox\Messenger\Api\Controllers\ChatController:
+#        tags: ['controller.service_arguments']
+#
+#    PhpLab\Sandbox\Bot\Api\Controllers\ChatController:
+#        tags: ['controller.service_arguments']
+#
+#    PhpLab\Sandbox\Messenger\Web\Controllers\ChatController:
+#        tags: ['controller.service_arguments']
 
-    PhpLab\Sandbox\Storage\Api\Controllers\FileController:
-        tags: ['controller.service_arguments']
+#    PhpLab\Bundle\User\Api\Controllers\AuthController:
+#        tags: ['controller.service_arguments']
 
-    PhpLab\Sandbox\Article\Web\Controllers\ArticleController:
-        tags: ['controller.service_arguments']
-
-    PhpLab\Sandbox\Messenger\Api\Controllers\ChatController:
-        tags: ['controller.service_arguments']
-
-    PhpLab\Sandbox\Bot\Api\Controllers\ChatController:
-        tags: ['controller.service_arguments']
-
-    PhpLab\Sandbox\Messenger\Web\Controllers\ChatController:
-        tags: ['controller.service_arguments']
-
-    PhpLab\Bundle\User\Api\Controllers\AuthController:
-        tags: ['controller.service_arguments']
-
-    PhpLab\Sandbox\Queue\Commands\RunCommand:
-        tags: ['controller.service_arguments']
+#    PhpLab\Sandbox\Queue\Commands\RunCommand:
+#        tags: ['controller.service_arguments']
 
     PhpLab\Eloquent\Db\Helpers\Manager:
         arguments:
@@ -72,3 +72,7 @@ services:
     PhpLab\Sandbox\Notify\Domain\Interfaces\Repositories\EmailRepositoryInterface:
         class: PhpLab\Sandbox\Notify\Domain\Repositories\Dev\EmailRepository
         public: true
+
+    PhpLab\Sandbox\Dashboard\Domain\Interfaces\Services\DocServiceInterface:
+            class: PhpLab\Sandbox\Dashboard\Domain\Services\DocService
+            public: true
