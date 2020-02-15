@@ -18,6 +18,17 @@ class DocController extends AbstractController
         $this->docService = new DocService;
     }
 
+    public function index()
+    {
+        $versionList = $this->docService->versionList();
+        $html = '<ul>';
+        foreach ($versionList as $version) {
+            $html .= "<li><a href=\"/api/v$version\">API version $version</a></li>";
+        }
+        $html .= '</ul>';
+        return new Response($html);
+    }
+
     public function show($version)
     {
         try {

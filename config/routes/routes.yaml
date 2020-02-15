@@ -1,13 +1,9 @@
 
 # API
 
-api_root:
-    path: 'api'
-    controller: App\Bundle\Dashboard\Api\Controllers\DefaultController::needVersion
-
-api_version:
-    path: 'api/v{version}'
-    controller: App\Bundle\Dashboard\Api\Controllers\DocController::show
+api_dashboard:
+    prefix: 'api'
+    resource: "../../src/Bundle/Dashboard/Api/config/routes.yaml"
 
 api_article:
     prefix: 'api/v1'
