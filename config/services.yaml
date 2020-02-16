@@ -76,3 +76,7 @@ services:
     PhpLab\Sandbox\Dashboard\Domain\Interfaces\Services\DocServiceInterface:
             class: PhpLab\Sandbox\Dashboard\Domain\Services\DocService
             public: true
+
+#    PhpLab\Bundle\Crypt\Interfaces\Services\JwtServiceInterface:
+#            class: PhpLab\Bundle\Crypt\Services\JwtService
+#            public: true
