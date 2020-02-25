@@ -28,7 +28,18 @@
         "symfony/serializer-pack": "*",
         "symfony/swiftmailer-bundle": "^3.1",
         "symfony/translation": "4.*",
-        "symfony/web-link": "4.*"
+        "symfony/web-link": "4.*",
+
+        "friendsofsymfony/rest-bundle": "^2.5",
+        "jms/serializer-bundle": "^3.4",
+        "symfony/yaml": "4.*",
+        "symfony/console": "4.*",
+        "symfony/twig-bundle": "4.*",
+        "symfony/http-client": "4.*",
+        "symfony/asset": "4.*",
+        "symfony/serializer": "4.*",
+        "symfony/validator": "4.*",
+        "symfony/orm-pack": "^1.0"
     },
     "require-dev": {
         "php7lab/dev": "dev-master",
