@@ -118,10 +118,6 @@
         },
         {
             "type": "git",
-            "url": "https://github.com/php7lab/core.git"
-        },
-        {
-            "type": "git",
             "url": "https://github.com/php7lab/web.git"
         },
         {
