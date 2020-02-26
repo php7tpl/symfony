@@ -1,0 +1,8 @@
+{% block javascripts %}
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            toastr.options = {"positionClass": "toast-bottom-left"};
+        });
+    </script>
+{% endblock %}
+{% include '@Notify/notify.html.twig' %}

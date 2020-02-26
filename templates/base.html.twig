@@ -5,6 +5,7 @@
 {{ script('/bundles/web/vendor/jquery/jquery.min.js') }}
 {{ script('/bundles/web/vendor/bootstrap/js/bootstrap.bundle.min.js') }}
 {{ breadcrumbAdd('<i class="fa fa-home" aria-hidden="true"></i>', '/') }}
+{% include 'widget/notify.html.twig' %}
 {% set bodyCode %}
 {% block body %}<i class="text-muted">Empty content</i>{% endblock %}
 {% endset %}
@@ -13,7 +14,6 @@
     <meta charset="utf-8">
     <title>{% block title %}Welcome!{% endblock %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    {% include '@Notify/notify.html.twig' %}
     {% include '@Web/style.html.twig' %}
 </head>
 <body>
