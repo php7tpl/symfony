@@ -3,9 +3,9 @@
 namespace Tests\User\Web;
 
 use PhpLab\Core\Enums\Http\HttpStatusCodeEnum;
-use PhpLab\Test\Base\BaseRestTest;
+use PhpLab\Test\Base\BaseRestWebTest;
 
-class DashboardTest extends BaseRestTest
+class DashboardTest extends BaseRestWebTest
 {
 
     protected $basePath = '';

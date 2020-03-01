@@ -3,9 +3,9 @@
 namespace Tests\User\Api;
 
 use PhpLab\Sandbox\Wsdl\Api\Controllers\HelloInterface;
-use PhpLab\Test\Base\BaseRestTest;
+use PhpLab\Test\Base\BaseRestApiTest;
 
-class WsdlTest extends BaseRestTest
+class WsdlTest extends BaseRestApiTest
 {
 
     protected $basePath = '';
