@@ -19,15 +19,15 @@ services:
 
     PhpLab\Web\:
         resource: '../vendor/php7lab/web/src/*'
-        exclude: '../vendor/php7lab/web/src/{DependencyInjection,Entity,Migrations,Migration,Tests,Kernel.php}'
+        exclude: '../vendor/php7lab/web/src/{DependencyInjection,Entity,Migrations,Migration,Tests,Kernel.php,*/Yii}'
 
     PhpLab\Sandbox\:
         resource: '../vendor/php7lab/sandbox/src/*'
-        exclude: '../vendor/php7lab/sandbox/src/{DependencyInjection,Entity,Migrations,Migration,Tests,Kernel.php}'
+        exclude: '../vendor/php7lab/sandbox/src/{DependencyInjection,Entity,Migrations,Migration,Tests,Kernel.php,*/Yii}'
 
     PhpLab\Bundle\:
         resource: '../vendor/php7lab/bundle/src/*'
-        exclude: '../vendor/php7lab/bundle/src/{DependencyInjection,Entity,Migrations,Migration,Tests,Kernel.php}'
+        exclude: '../vendor/php7lab/bundle/src/{DependencyInjection,Entity,Migrations,Migration,Tests,Kernel.php,*/Yii}'
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
