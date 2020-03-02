@@ -23,11 +23,11 @@ services:
 
     PhpLab\Sandbox\:
         resource: '../vendor/php7lab/sandbox/src/*'
-        exclude: '../vendor/php7lab/sandbox/src/{DependencyInjection,Entity,Migrations,Migration,Tests,Kernel.php,*/Yii}'
+        exclude: '../vendor/php7lab/sandbox/src/{DependencyInjection,Entity,Migrations,Migration,Tests,Kernel.php,*/Yii,*/Domain/Migrations}'
 
     PhpLab\Bundle\:
         resource: '../vendor/php7lab/bundle/src/*'
-        exclude: '../vendor/php7lab/bundle/src/{DependencyInjection,Entity,Migrations,Migration,Tests,Kernel.php,*/Yii}'
+        exclude: '../vendor/php7lab/bundle/src/{DependencyInjection,Entity,Migrations,Migration,Tests,Kernel.php,*/Yii,*/Domain/Migrations}'
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
