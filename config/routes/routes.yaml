@@ -23,7 +23,7 @@ api_user:
 
 api_bot:
     prefix: 'api/v1'
-    resource: "../../vendor/php7lab/sandbox/src/Bot/Api/config/routes.yaml"
+    resource: "../../vendor/php7lab/sandbox/src/Bot/Symfony/Api/config/routes.yaml"
 
 # Web
 
