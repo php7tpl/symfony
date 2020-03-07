@@ -28,11 +28,11 @@ doctrine:
 #                is_bundle: false
 #                type: annotation
 #                dir: '%kernel.project_dir%/src/PhpExample/Bundle/Article/Domain/Entity'
-#                prefix: 'PhpLab\Sandbox\Article\Domain\Entities'
+#                prefix: 'PhpBundle\Article\Domain\Entities'
 #                alias: App
             User:
                 is_bundle: false
                 type: annotation
-                dir: '%kernel.project_dir%/vendor/php7lab/bundle/src/User/Domain/Entities'
-                prefix: 'PhpLab\Bundle\User\Domain\Entities'
+                dir: '%kernel.project_dir%/vendor/php7bundle/user/src/Domain/Entities'
+                prefix: 'PhpBundle\User\Domain\Entities'
                 alias: App

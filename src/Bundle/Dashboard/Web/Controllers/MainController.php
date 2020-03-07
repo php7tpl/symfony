@@ -3,11 +3,11 @@
 namespace App\Bundle\Dashboard\Web\Controllers;
 
 use PhpLab\Core\Domain\Libs\Query;
-use PhpLab\Sandbox\Article\Domain\Interfaces\PostServiceInterface;
-use PhpLab\Sandbox\Notify\Domain\Entities\EmailEntity;
-use PhpLab\Sandbox\Notify\Domain\Entities\SmsEntity;
-use PhpLab\Sandbox\Notify\Domain\Interfaces\Services\EmailServiceInterface;
-use PhpLab\Sandbox\Queue\Domain\Interfaces\JobServiceInterface;
+use PhpBundle\Article\Domain\Interfaces\PostServiceInterface;
+use PhpBundle\Notify\Domain\Entities\EmailEntity;
+use PhpBundle\Notify\Domain\Entities\SmsEntity;
+use PhpBundle\Notify\Domain\Interfaces\Services\EmailServiceInterface;
+use PhpBundle\Queue\Domain\Interfaces\JobServiceInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class MainController extends AbstractController

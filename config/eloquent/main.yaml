@@ -28,16 +28,16 @@ connection:
 fixture:
     directory:
 #        - /src/Fixtures
-        - /vendor/php7lab/sandbox/src/Article/Domain/Fixtures
+        - /vendor/php7bundle/article/src/Domain/Fixtures
+        - /vendor/php7bundle/user/src/Domain/Fixtures
+        - /vendor/php7bundle/storage/src/Domain/Fixtures
         - /vendor/php7lab/sandbox/src/Messenger/Domain/Fixtures
-        - /vendor/php7lab/bundle/src/User/Domain/Fixtures
-        - /vendor/php7lab/sandbox/src/Storage/Domain/Fixtures
         - /vendor/php7lab/sandbox/src/Bot/Domain/Fixtures
 migrate:
     directory:
-        - /vendor/php7lab/sandbox/src/Article/Domain/Migrations
+        - /vendor/php7bundle/article/src/Domain/Migrations
+        - /vendor/php7bundle/user/src/Domain/Migrations
+        - /vendor/php7bundle/queue/src/Domain/Migrations
+        - /vendor/php7bundle/storage/src/Domain/Migrations
         - /vendor/php7lab/sandbox/src/Messenger/Domain/Migrations
-        - /vendor/php7lab/bundle/src/User/Domain/Migrations
-        - /vendor/php7lab/sandbox/src/Queue/Domain/Migrations
-        - /vendor/php7lab/sandbox/src/Storage/Domain/Migrations
         - /vendor/php7lab/sandbox/src/Bot/Domain/Migrations

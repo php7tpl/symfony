@@ -25,6 +25,41 @@ services:
         resource: '../vendor/php7lab/sandbox/src/*'
         exclude: '../vendor/php7lab/sandbox/src/{DependencyInjection,Entity,Migrations,Migration,Tests,Kernel.php,*/Yii,*/Domain/Migrations}'
 
+
+    PhpBundle\Article\:
+        resource: '../vendor/php7bundle/article/src/*'
+        exclude: '../vendor/php7bundle/article/src/{DependencyInjection,Entity,Migrations,Migration,Tests,Kernel.php,*/Yii,*/Domain/Migrations}'
+
+    PhpBundle\Crypt\:
+        resource: '../vendor/php7bundle/crypt/src/*'
+        exclude: '../vendor/php7bundle/crypt/src/{DependencyInjection,Entity,Migrations,Migration,Tests,Kernel.php,*/Yii,*/Domain/Migrations}'
+
+    PhpBundle\Notify\:
+        resource: '../vendor/php7bundle/notify/src/*'
+        exclude: '../vendor/php7bundle/notify/src/{DependencyInjection,Entity,Migrations,Migration,Tests,Kernel.php,*/Yii,*/Domain/Migrations}'
+
+    PhpBundle\Queue\:
+        resource: '../vendor/php7bundle/queue/src/*'
+        exclude: '../vendor/php7bundle/queue/src/{DependencyInjection,Entity,Migrations,Migration,Tests,Kernel.php,*/Yii,*/Domain/Migrations}'
+
+    PhpBundle\Reference\:
+        resource: '../vendor/php7bundle/reference/src/*'
+        exclude: '../vendor/php7bundle/reference/src/{DependencyInjection,Entity,Migrations,Migration,Tests,Kernel.php,*/Yii,*/Domain/Migrations}'
+
+    PhpBundle\Storage\:
+        resource: '../vendor/php7bundle/storage/src/*'
+        exclude: '../vendor/php7bundle/storage/src/{DependencyInjection,Entity,Migrations,Migration,Tests,Kernel.php,*/Yii,*/Domain/Migrations}'
+
+    PhpBundle\User\:
+        resource: '../vendor/php7bundle/user/src/*'
+        exclude: '../vendor/php7bundle/user/src/{DependencyInjection,Entity,Migrations,Migration,Tests,Kernel.php,*/Yii,*/Domain/Migrations}'
+
+    PhpBundle\Article\Symfony\Api\Controllers\ArticleController:
+        tags: ['controller.service_arguments']
+
+#    PhpBundle\Article\Symfony\Web\Controllers\ArticleController:
+#        tags: ['controller.service_arguments']
+
     PhpLab\Bundle\:
         resource: '../vendor/php7lab/bundle/src/*'
         exclude: '../vendor/php7lab/bundle/src/{DependencyInjection,Entity,Migrations,Migration,Tests,Kernel.php,*/Yii,*/Domain/Migrations}'
@@ -32,13 +67,7 @@ services:
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
 
-    PhpLab\Sandbox\Article\Symfony\Api\Controllers\ArticleController:
-        tags: ['controller.service_arguments']
-
-#    PhpLab\Sandbox\Storage\Symfony\Api\Controllers\FileController:
-#        tags: ['controller.service_arguments']
-
-#    PhpLab\Sandbox\Article\Symfony\Web\Controllers\ArticleController:
+#    PhpBundle\Storage\Symfony\Api\Controllers\FileController:
 #        tags: ['controller.service_arguments']
 
     PhpLab\Sandbox\Messenger\Symfony\Api\Controllers\ChatController:
@@ -50,10 +79,10 @@ services:
 #    PhpLab\Sandbox\Messenger\Symfony\Web\Controllers\ChatController:
 #        tags: ['controller.service_arguments']
 
-#    PhpLab\Bundle\User\Symfony\Api\Controllers\AuthController:
+#    PhpBundle\User\Symfony\Api\Controllers\AuthController:
 #        tags: ['controller.service_arguments']
 
-#    PhpLab\Sandbox\Queue\Symfony\Commands\RunCommand:
+#    PhpBundle\Queue\Symfony\Commands\RunCommand:
 #        tags: ['controller.service_arguments']
 
     PhpLab\Eloquent\Db\Helpers\Manager:
@@ -69,14 +98,14 @@ services:
         arguments:
             $debug: '%kernel.debug%'
 
-    PhpLab\Sandbox\Notify\Domain\Interfaces\Repositories\EmailRepositoryInterface:
-        class: PhpLab\Sandbox\Notify\Domain\Repositories\Dev\EmailRepository
+    PhpBundle\Notify\Domain\Interfaces\Repositories\EmailRepositoryInterface:
+        class: PhpBundle\Notify\Domain\Repositories\Dev\EmailRepository
         public: true
 
     PhpLab\Sandbox\Dashboard\Domain\Interfaces\Services\DocServiceInterface:
             class: PhpLab\Sandbox\Dashboard\Domain\Services\DocService
             public: true
 
-#    PhpLab\Bundle\Crypt\Interfaces\Services\JwtServiceInterface:
-#            class: PhpLab\Bundle\Crypt\Services\JwtService
+#    PhpBundle\Crypt\Domain\Interfaces\Services\JwtServiceInterface:
+#            class: PhpBundle\Crypt\Domain\Services\JwtService
 #            public: true
