@@ -15,6 +15,15 @@
         "php7lab/rest": "dev-master",
         "php7lab/sandbox": "dev-master",
         "php7lab/web": "dev-master",
+
+        "php7bundle/article": "dev-master",
+        "php7bundle/crypt": "dev-master",
+        "php7bundle/notify": "dev-master",
+        "php7bundle/queue": "dev-master",
+        "php7bundle/reference": "dev-master",
+        "php7bundle/storage": "dev-master",
+        "php7bundle/user": "dev-master",
+
         "phpseclib/phpseclib": "^2.0",
         "sensio/framework-extra-bundle": "^5.1",
         "symfony/expression-language": "4.*",
