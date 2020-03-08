@@ -14,9 +14,11 @@
                 </div>
             </div>
             <div class="navbar-nav">
-                <span class="nav-item">
-                    {% include '@Notify/navbar_item.html.twig' %}
-                </span>
+                {% if app.user %}
+                    <div class="nav-item dropdown">
+                        {% include '@Messenger/navbar_item.html.twig' %}
+                    </div>
+                {% endif %}
                 <div class="nav-item dropdown">
                     {% include '@User/navbar_item.html.twig' %}
                 </div>

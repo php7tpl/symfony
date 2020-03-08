@@ -103,8 +103,12 @@ services:
         public: true
 
     PhpLab\Sandbox\Dashboard\Domain\Interfaces\Services\DocServiceInterface:
-            class: PhpLab\Sandbox\Dashboard\Domain\Services\DocService
-            public: true
+        class: PhpLab\Sandbox\Dashboard\Domain\Services\DocService
+        public: true
+
+    PhpLab\Sandbox\Messenger\Domain\Interfaces\Services\MessageServiceInterface:
+        class: PhpLab\Sandbox\Messenger\Domain\Services\MessageService
+        public: true
 
 #    PhpBundle\Crypt\Domain\Interfaces\Services\JwtServiceInterface:
 #            class: PhpBundle\Crypt\Domain\Services\JwtService
