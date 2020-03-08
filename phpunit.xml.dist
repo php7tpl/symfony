@@ -15,5 +15,65 @@
         <testsuite name="Project Test Suite">
             <directory>tests</directory>
         </testsuite>
+		
+		<!--<testsuite name="PhpLab\Bundle Test Suite">
+            <directory>vendor/php7lab/bundle/tests/</directory>
+        </testsuite>-->
+
+        <testsuite name="PhpLab\Core Test Suite">
+            <directory>vendor/php7lab/core/tests/</directory>
+        </testsuite>
+
+        <testsuite name="PhpLab\Dev Test Suite">
+            <directory>vendor/php7lab/dev/tests/</directory>
+        </testsuite>
+
+        <testsuite name="PhpLab\Eloquent Test Suite">
+            <directory>vendor/php7lab/eloquent/tests/</directory>
+        </testsuite>
+
+        <testsuite name="PhpLab\Rest Test Suite">
+            <directory>vendor/php7lab/rest/tests/</directory>
+        </testsuite>
+
+        <!--<testsuite name="PhpLab\Sandbox Test Suite">
+            <directory>vendor/php7lab/sandbox/tests/</directory>
+        </testsuite>-->
+
+        <testsuite name="PhpLab\Test Test Suite">
+            <directory>vendor/php7lab/test/tests/</directory>
+        </testsuite>
+
+        <testsuite name="PhpLab\Web Test Suite">
+            <directory>vendor/php7lab/web/tests/</directory>
+        </testsuite>
+		
+		<testsuite name="PhpBundle\article Test Suite">
+            <directory>vendor/php7bundle/article/tests/</directory>
+        </testsuite>
+
+        <testsuite name="PhpBundle\crypt Test Suite">
+            <directory>vendor/php7bundle/crypt/tests/</directory>
+        </testsuite>
+
+        <testsuite name="PhpBundle\notify Test Suite">
+            <directory>vendor/php7bundle/notify/tests/</directory>
+        </testsuite>
+
+        <testsuite name="PhpBundle\queue Test Suite">
+            <directory>vendor/php7bundle/queue/tests/</directory>
+        </testsuite>
+
+        <testsuite name="PhpBundle\reference Test Suite">
+            <directory>vendor/php7bundle/reference/tests/</directory>
+        </testsuite>
+
+        <testsuite name="PhpBundle\storage Test Suite">
+            <directory>vendor/php7bundle/storage/tests/</directory>
+        </testsuite>
+
+        <testsuite name="PhpBundle\user Test Suite">
+            <directory>vendor/php7bundle/user/tests/</directory>
+        </testsuite>
     </testsuites>
 </phpunit>
