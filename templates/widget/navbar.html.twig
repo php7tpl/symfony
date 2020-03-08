@@ -16,6 +16,9 @@
             <div class="navbar-nav">
                 {% if app.user %}
                     <div class="nav-item dropdown">
+                        {% include '@Notify/navbar_item.html.twig' %}
+                    </div>
+                    <div class="nav-item dropdown">
                         {% include '@Messenger/navbar_item.html.twig' %}
                     </div>
                 {% endif %}
