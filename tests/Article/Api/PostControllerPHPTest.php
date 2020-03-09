@@ -5,7 +5,13 @@ namespace Tests\Article\Api;
 class PostControllerPHPTest extends \PhpLab\Sandbox\Tests\rest\Article\PostControllerTest
 {
 
-    protected $basePath = 'php/v1/';
+    protected $basePath = 'v1';
+
+    protected function setUp(): void
+    {
+        parent::setUp();
+        $this->setBaseUrl($_ENV['API_PHP_URL']);
+    }
 
     public function testBadCreate()
     {
