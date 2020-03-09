@@ -9,7 +9,7 @@ use PhpBundle\Crypt\Domain\Libs\Encoders\GzEncoder;
 use PhpBundle\Crypt\Domain\Libs\Encoders\JsonEncoder;
 use PhpLab\Rest\Helpers\CorsHelper;
 use PhpLab\Sandbox\Proto\Libs\RestProto;
-use Symfony\Component\Debug\Debug;
+use Symfony\Component\ErrorHandler\Debug;
 use Symfony\Component\HttpFoundation\Request;
 
 require dirname(__DIR__).'/config/bootstrap.php';
