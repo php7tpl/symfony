@@ -31,6 +31,10 @@ default:
     path: /
     controller: App\Bundle\Dashboard\Web\Controllers\MainController::index
 
+test:
+    path: test
+    controller: App\Bundle\Dashboard\Web\Controllers\MainController::test
+
 web_article:
     resource: "@ArticleBundle/Web/config/routes.yaml"
 

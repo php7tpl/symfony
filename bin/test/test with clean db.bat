@@ -3,9 +3,10 @@
 set rootDir="%~dp0/../.."
 set eloquentBinDir="%rootDir%/vendor/php7lab/eloquent/bin"
 set phpunit="vendor/phpunit/phpunit/phpunit"
+set cacheDir="var/cache/test"
 
 cd %rootDir%
-rmdir /Q /S "var/cache/test"
+if exist %cacheDir% rmdir /Q /S %cacheDir%
 
 cd %eloquentBinDir%
 php console_test db:migrate:down --withConfirm=0

@@ -110,6 +110,10 @@ services:
         class: PhpLab\Sandbox\Messenger\Domain\Services\MessageService
         public: true
 
+    PhpBundle\Article\Domain\Interfaces\PostRepositoryInterface:
+        class: PhpBundle\Article\Domain\Repositories\Eloquent\PostRepository
+        public: true
+
 #    PhpBundle\Crypt\Domain\Interfaces\Services\JwtServiceInterface:
 #            class: PhpBundle\Crypt\Domain\Services\JwtService
 #            public: true

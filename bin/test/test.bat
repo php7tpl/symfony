@@ -2,8 +2,9 @@
 
 set rootDir="%~dp0/../.."
 set phpunit="vendor/phpunit/phpunit/phpunit"
+set cacheDir="var/cache/test"
 
 cd %rootDir%
-rmdir /Q /S "var/cache/test"
+::if exist %cacheDir% rmdir /Q /S %cacheDir%
 php %phpunit%
 pause
