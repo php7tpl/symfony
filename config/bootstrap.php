@@ -1,8 +1,12 @@
 <?php
 
-require __DIR__ . '/../vendor/autoload.php';
+use App\Autoload;
+use PhpLab\Core\Libs\Env\DotEnvHelper;
 
-\PhpLab\Core\Libs\Env\DotEnvHelper::init();
+include_once(__DIR__ . '/../src/Autoload.php');
+
+Autoload::init();
+DotEnvHelper::init(__DIR__ . '/..');
 
 $_SERVER += $_ENV;
 $_SERVER['APP_ENV'] = $_ENV['APP_ENV'] = ($_SERVER['APP_ENV'] ?? $_ENV['APP_ENV'] ?? null) ?: 'dev';
