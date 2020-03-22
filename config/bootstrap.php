@@ -1,11 +1,7 @@
 <?php
 
-use App\Autoload;
 use PhpLab\Core\Libs\Env\DotEnvHelper;
 
-include_once(__DIR__ . '/../src/Autoload.php');
-
-Autoload::init();
 DotEnvHelper::init(__DIR__ . '/..');
 
 $_SERVER += $_ENV;
