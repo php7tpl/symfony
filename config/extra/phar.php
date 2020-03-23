@@ -7,8 +7,8 @@ return [
     ],
     'profiles' => [
         'vendor' => [
-            'sourceDir' => realpath(__DIR__ . '/../vendor'),
-            'outputFile' => realpath(__DIR__ . '/../vendor') . '/vendor.phar',
+            'sourceDir' => realpath(__DIR__ . '/../../vendor'),
+            'outputFile' => realpath(__DIR__ . '/../../vendor') . '/vendor.phar',
             'excludes' => [
                 'regex:#\/(|tests|test|docs|doc|examples|example|benchmarks|benchmark|\.git)\/#iu',
                 '/composer.json',
@@ -41,8 +41,8 @@ return [
             ],
         ],
         'app' => [
-            'sourceDir' => realpath(__DIR__ . '/../src'),
-            'outputFile' => realpath(__DIR__ . '/../src') . '/app.phar',
+            'sourceDir' => realpath(__DIR__ . '/../../src'),
+            'outputFile' => realpath(__DIR__ . '/../../src') . '/app.phar',
             'excludes' => [
                 '/src/Bootstrap/',
                 '/src/Migrations/',

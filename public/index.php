@@ -12,7 +12,7 @@ use PhpLab\Sandbox\Proto\Libs\RestProto;
 use Symfony\Component\ErrorHandler\Debug;
 use Symfony\Component\HttpFoundation\Request;
 
-require_once __DIR__ . '/../config/autoload.php';
+require_once __DIR__ . '/../src/Bootstrap/autoload.php';
 require_once dirname(__DIR__).'/config/bootstrap.php';
 
 // todo: make hook

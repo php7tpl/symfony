@@ -4,11 +4,12 @@ namespace App\Bootstrap;
 
 use PhpLab\Core\Helpers\ComposerHelper;
 
-class Autoload
+class Autoloader
 {
 
     public static function bootstrapApplication(string $rootDir)
     {
+        $rootDir = realpath($rootDir);
         $pharFileName = 'phar://' . $rootDir . '/src/app.phar';
         if(file_exists($pharFileName)) {
             ComposerHelper::register('App', $pharFileName);
@@ -19,7 +20,7 @@ class Autoload
 
     public static function bootstrapVendor(string $rootDir)
     {
-        //$rootDir = realpath($rootDir);
+        $rootDir = realpath($rootDir);
         $vendorDir = $rootDir . '/vendor';
         $isIncluded = self::includeVendorAutoload($vendorDir);
         if ( ! $isIncluded) {
