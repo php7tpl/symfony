@@ -7,7 +7,7 @@ use PhpBundle\Article\Domain\Interfaces\PostServiceInterface;
 use PhpBundle\Notify\Domain\Entities\EmailEntity;
 use PhpBundle\Notify\Domain\Entities\SmsEntity;
 use PhpBundle\Notify\Domain\Interfaces\Services\EmailServiceInterface;
-use PhpBundle\Queue\Domain\Interfaces\JobServiceInterface;
+use PhpBundle\Queue\Domain\Interfaces\Services\JobServiceInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class MainController extends AbstractController
