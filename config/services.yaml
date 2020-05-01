@@ -25,7 +25,6 @@ services:
         resource: '../vendor/php7lab/sandbox/src/*'
         exclude: '../vendor/php7lab/sandbox/src/{*/Yii,*/Domain/Migrations,*/Domain/Fixtures}'
 
-
     PhpBundle\Article\:
         resource: '../vendor/php7bundle/article/src/*'
         exclude: '../vendor/php7bundle/article/src/{DependencyInjection,Entity,Migrations,Migration,Tests,Kernel.php,*/Yii,*/Migrations,*/Fixtures}'

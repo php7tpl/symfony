@@ -26,6 +26,48 @@ class MainController extends AbstractController
 
     public function index()
     {
+        $query = new Query;
+        $query->with('category');
+        $query->perPage(5);
+        $postCollection = $this->postService->all($query);
+        return $this->render('dashboard/web/index.html.twig', [
+            'postCollection' => $postCollection,
+            'links' => [
+                [
+                    'title' => 'API - auth',
+                    'url' => '/api/v1/auth',
+                ],
+                [
+                    'title' => 'API - rbac',
+                    'url' => '/api/v1/rbac',
+                ],
+                [
+                    'title' => 'API - article-post',
+                    'url' => '/api/v1/article-post',
+                ],
+                [
+                    'title' => 'Web - messenger-chat',
+                    'url' => '/chat',
+                ],
+                [
+                    'title' => 'API - messenger-chat',
+                    'url' => '/api/v1/messenger-chat',
+                ],
+                [
+                    'title' => 'API - article-post (PHP)',
+                    'url' => '/php/v1/article-post',
+                ],
+
+                [
+                    'title' => 'rails',
+                    'url' => '/rails',
+                ],
+            ],
+        ]);
+    }
+
+    public function index2222()
+    {
         //$user = $this->container->get('security.token_storage')->getToken()->getUser();
         //dd($user);
 
