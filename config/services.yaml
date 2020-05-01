@@ -15,44 +15,44 @@ services:
     # this creates a service per class whose id is the fully-qualified class name
     App\:
         resource: '../src/*'
-        exclude: '../src/{DependencyInjection,Entity,Migrations,Migration,Tests,Kernel.php}'
+        exclude: '../src/{DependencyInjection,Entity,Migrations,Migration,Tests,Bootstrap,Kernel.php}'
 
     PhpLab\Web\:
         resource: '../vendor/php7lab/web/src/*'
-        exclude: '../vendor/php7lab/web/src/{DependencyInjection,Entity,Migrations,Migration,Tests,Kernel.php,*/Yii}'
+        exclude: '../vendor/php7lab/web/src/{DependencyInjection,Entity,Migrations,Migration,Tests,Kernel.php,*/Yii,*/Base*}'
 
     PhpLab\Sandbox\:
         resource: '../vendor/php7lab/sandbox/src/*'
-        exclude: '../vendor/php7lab/sandbox/src/{DependencyInjection,Entity,Migrations,Migration,Tests,Kernel.php,*/Yii,*/Domain/Migrations}'
+        exclude: '../vendor/php7lab/sandbox/src/{*/Yii,*/Domain/Migrations,*/Domain/Fixtures}'
 
 
     PhpBundle\Article\:
         resource: '../vendor/php7bundle/article/src/*'
-        exclude: '../vendor/php7bundle/article/src/{DependencyInjection,Entity,Migrations,Migration,Tests,Kernel.php,*/Yii,*/Domain/Migrations}'
+        exclude: '../vendor/php7bundle/article/src/{DependencyInjection,Entity,Migrations,Migration,Tests,Kernel.php,*/Yii,*/Migrations,*/Fixtures}'
 
     PhpBundle\Crypt\:
         resource: '../vendor/php7bundle/crypt/src/*'
-        exclude: '../vendor/php7bundle/crypt/src/{DependencyInjection,Entity,Migrations,Migration,Tests,Kernel.php,*/Yii,*/Domain/Migrations}'
+        exclude: '../vendor/php7bundle/crypt/src/{DependencyInjection,Entity,Migrations,Migration,Tests,Kernel.php,*/Yii,*/Migrations,*/Fixtures}'
 
     PhpBundle\Notify\:
         resource: '../vendor/php7bundle/notify/src/*'
-        exclude: '../vendor/php7bundle/notify/src/{DependencyInjection,Entity,Migrations,Migration,Tests,Kernel.php,*/Yii,*/Domain/Migrations}'
+        exclude: '../vendor/php7bundle/notify/src/{DependencyInjection,Entity,Migrations,Migration,Tests,Kernel.php,*/Yii,*/Migrations,*/Fixtures}'
 
     PhpBundle\Queue\:
         resource: '../vendor/php7bundle/queue/src/*'
-        exclude: '../vendor/php7bundle/queue/src/{DependencyInjection,Entity,Migrations,Migration,Tests,Kernel.php,*/Yii,*/Domain/Migrations}'
+        exclude: '../vendor/php7bundle/queue/src/{DependencyInjection,Entity,Migrations,Migration,Tests,Kernel.php,*/Yii,*/Migrations,*/Fixtures}'
 
     PhpBundle\Reference\:
         resource: '../vendor/php7bundle/reference/src/*'
-        exclude: '../vendor/php7bundle/reference/src/{DependencyInjection,Entity,Migrations,Migration,Tests,Kernel.php,*/Yii,*/Domain/Migrations}'
+        exclude: '../vendor/php7bundle/reference/src/{DependencyInjection,Entity,Migrations,Migration,Tests,Kernel.php,*/Yii,*/Migrations,*/Fixtures}'
 
     PhpBundle\Storage\:
         resource: '../vendor/php7bundle/storage/src/*'
-        exclude: '../vendor/php7bundle/storage/src/{DependencyInjection,Entity,Migrations,Migration,Tests,Kernel.php,*/Yii,*/Domain/Migrations}'
+        exclude: '../vendor/php7bundle/storage/src/{DependencyInjection,Entity,Migrations,Migration,Tests,Kernel.php,*/Yii,*/Migrations,*/Fixtures}'
 
     PhpBundle\User\:
         resource: '../vendor/php7bundle/user/src/*'
-        exclude: '../vendor/php7bundle/user/src/{DependencyInjection,Entity,Migrations,Migration,Tests,Kernel.php,*/Yii,*/Domain/Migrations}'
+        exclude: '../vendor/php7bundle/user/src/{DependencyInjection,Entity,Migrations,Migration,Tests,Kernel.php,*/Yii,*/Migrations,*/Fixtures}'
 
     PhpBundle\Article\Symfony\Api\Controllers\ArticleController:
         tags: ['controller.service_arguments']
@@ -62,7 +62,7 @@ services:
 
     PhpLab\Bundle\:
         resource: '../vendor/php7lab/bundle/src/*'
-        exclude: '../vendor/php7lab/bundle/src/{DependencyInjection,Entity,Migrations,Migration,Tests,Kernel.php,*/Yii,*/Domain/Migrations}'
+        exclude: '../vendor/php7lab/bundle/src/{DependencyInjection,Entity,Migrations,Migration,Tests,Kernel.php,*/Yii,*/Migrations,*/Fixtures}'
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
