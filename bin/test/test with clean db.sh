@@ -1,6 +1,8 @@
 #!/bin/sh
 cd ../..
-rm -rf var/cache/test
+#chmod -R a+rw var
+rm -rf var/cache/test/*
+rm var/log/test.log
 
 cd vendor/php7lab/eloquent/bin
 php console_test db:migrate:down --withConfirm=0
